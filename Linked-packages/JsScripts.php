@@ -1,4 +1,5 @@
-<script src="js/vendor/jquery-3.4.1.min.js"></script>
+<!-- JS here -->
+        <script src="js/vendor/jquery-3.4.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/isotope.pkgd.min.js"></script>
