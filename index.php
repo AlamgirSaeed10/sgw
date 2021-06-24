@@ -97,13 +97,15 @@
 
         if (mysqli_num_rows($result) > 0) {
           // output data of each row
-          while($row = mysqli_fetch_assoc($result)) {?>
+          while($row = mysqli_fetch_assoc($result)) {
+         
+          ?>
             <!-- $row["game_title"].$row["image"].$row["categories"]."<br/>";  -->
         
 
                                     <div class="latest-games-items mb-30">
                                         <div class="latest-games-thumb">
-                                            <a href="#"><img src="img/product/latest_games_thumb01.jpg" alt=""></a>
+                                            <a href="#"><img src="<?php echo $row['image']?>" height='400' width='100' alt=""></a>
                                         </div>
                                         <div class="latest-games-content">
                                             <div class="lg-tag">
