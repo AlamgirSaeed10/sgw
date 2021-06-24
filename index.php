@@ -1,470 +1,392 @@
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
-       <?php include('Linked-packages/headerLinks.php');?>
+        <?php include('Linked-packages/headerLinks.php');?>
+        <?php include_once('Database/connection.php');?>
+
     </head>
     <body>
+       
+
         <!-- preloader -->
-        <?php include('Linked-packages/Preloader.php');?>
+       <?php include('Linked-packages/preloader.php')?>
         <!-- preloader-end -->
 
         <!-- header-area -->
-        <header class="third-header-bg">
-        <?php include('Linked-packages/header.php');?>
-        </header>
-        <!-- header-area-end -->
+        <header>
+        <?php include('Linked-packages/header.php')?>
+        </header><!-- header-area-end -->
 
         <!-- main-area -->
         <main>
 
             <!-- slider-area -->
-            <section class="third-banner-bg">
-                <div class="container custom-container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="third-banner-img wow bounceInDown" data-wow-delay=".2s">
-                                <img src="img/slider/third_banner_img.png" alt="">
+            <section class="slider-area home-four-slider">
+                <div class="slider-active ">
+                    <div class="single-slider slider-bg slider-style-two">
+                        <div class="container custom-container-two">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-7 col-md-11">
+                                    <div class="slider-content">
+                                        <h6 data-animation="fadeInUp" data-delay=".4s">world gaming</h6>
+                                        <h2 data-animation="fadeInUp" data-delay=".4s">About </h2>
+                                        <p data-animation="fadeInUp" data-delay=".6s">Find technology or people for digital projects in public sector and Find an individual specialist develope researcher.</p>
+                                        <a href="#" class="btn btn-style-two" data-animation="fadeInUp" data-delay=".8s">READ MORE</a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="third-banner-content text-center wow bounceInUp" data-wow-delay=".2s">
-                                <h2>iám stream<span>er</span></h2>
-                                <h6>online streaming media</h6>
-                                <a href="#" class="btn rotated-btn">buy Now</a>
+                            <div class="slider-img"><img src="img/slider/command.jpg" alt="" data-animation="slideInRightS" data-delay=".8s"></div>
+                        </div>
+                    </div>
+                    <div class="single-slider slider-bg slider-style-two">
+                        <div class="container custom-container-two">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-7 col-md-11">
+                                    <div class="slider-content">
+                                        <h6 data-animation="fadeInUp" data-delay=".4s">world gaming</h6>
+                                        <h2 data-animation="fadeInUp" data-delay=".4s">UpComming </h2>
+                                        <p data-animation="fadeInUp" data-delay=".6s">Find technology or people for digital projects in public sector and Find an individual specialist develope researcher.</p>
+                                        <a href="#" class="btn btn-style-two" data-animation="fadeInUp" data-delay=".8s">READ MORE</a>
+                                    </div>
+                                </div>
                             </div>
+                            <div class="slider-img"><img src="img/slider/slide1.jpg" alt="" data-animation="slideInRightS" data-delay=".8s"></div>
+                        </div>
+                    </div>
+                    <div class="single-slider slider-bg slider-style-two">
+                        <div class="container custom-container-two">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-7 col-md-11">
+                                    <div class="slider-content">
+                                        <h6 data-animation="fadeInUp" data-delay=".4s">world gaming</h6>
+                                        <h2 data-animation="fadeInUp" data-delay=".4s">Top<span>Games</span> </h2>
+                                        <p data-animation="fadeInUp" data-delay=".6s">Find technology or people for digital projects in public sector and Find an individual specialist develope researcher.</p>
+                                        <a href="#" class="btn btn-style-two" data-animation="fadeInUp" data-delay=".8s">READ MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-img"><img src="img/slider/1595255375465.jpg" alt="" data-animation="slideInRightS" data-delay=".8s"></div>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- slider-area-end -->
 
-            <!-- third-about-area -->
-            <section class="third-about-area third-about-bg pt-120 pb-90">
-                <div class="container custom-container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 order-0 order-lg-2">
-                            <div class="third-about-img text-right position-relative">
-                                <img src="img/images/third_about_img.png" class="main-img" alt="">
-                                <img src="img/images/third_about_img_shadow.png" class="shadow" alt="">
+             
+
+            <!-- home-four-area-bg -->
+            <div class="home-four-area-bg">
+                <div class="bg"></div>
+                <!-- latest-games-area -->
+                <section class="latest-games-area home-four-latest-games pt-120">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8">
+                                <div class="section-title home-four-title mb-50">
+                                    <span>LATEST RELEASES</span>
+                                    <h2>Create & <span>Manage</span></h2>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="third-about-content">
-                                <div class="third-title-style">
-                                    <h2>themebey<span>ond</span></h2>
-                                    <div class="inner">
-                                        <h2>skyward sword</h2>
-                                        <h6 class="vertical-title">themebeyond</h6>
-                                        <p>The Legend of Zelda: Skyward Sword is an action-adventure game developed and published by Nintendo for the Wii. The six
-                                        teenth mainline entry in The Legend of Zelda series.</p>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="latest-games-active owl-carousel">
+                                    <?php 
+        $sql = "SELECT * FROM `latest_games`";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+          // output data of each row
+          while($row = mysqli_fetch_assoc($result)) {?>
+            <!-- $row["game_title"].$row["image"].$row["categories"]."<br/>";  -->
+        
+
+                                    <div class="latest-games-items mb-30">
+                                        <div class="latest-games-thumb">
+                                            <a href="#"><img src="img/product/latest_games_thumb01.jpg" alt=""></a>
+                                        </div>
+                                        <div class="latest-games-content">
+                                            <div class="lg-tag">
+                                                <a href="#"><?php echo $row["categories"]?></a>
+                                            </div>
+                                            <h4><a href="#"><?php echo $row["game_title"] ?></a></h4>
+                                            <p>entry fee : <span>free</span></p>
+                                        </div>
                                     </div>
-                                    <a href="#" class="btn rotated-btn">buy Now</a>
+                                       <?php
+                                   }
+        } 
+?>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="see-my-info-wrap pt-110">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="third-section-title text-center mb-75">
-                                    <h2>see <span>my</span> information</h2>
+                </section>
+                <!-- latest-games-area-end -->
+
+                <!-- live-match-area -->
+                <section class="live-match-area pt-90">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-8">
+                                <div class="section-title home-four-title text-center mb-60">
+                                    <h2>watch live <span>match</span></h2>
                                 </div>
                             </div>
                         </div>
                         <div class="row justify-content-center">
-                            <div class="col-xl-4 col-lg-6 col-sm-8">
-                                <div class="my-info-box mb-30">
-                                    <div class="my-info-box-top">
-                                        <h6>award winning</h6>
-                                        <img src="img/bg/my_info_box_hover.png" alt="" class="info-box-top-hover">
-                                    </div>
-                                    <div class="my-info-box-content">
-                                        <div class="mt-award">
-                                            <img src="img/images/about_award.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-sm-8">
-                                <div class="my-info-box mb-30">
-                                    <div class="my-info-box-top">
-                                        <h6>join our team</h6>
-                                        <img src="img/bg/my_info_box_hover.png" alt="" class="info-box-top-hover">
-                                    </div>
-                                    <div class="my-info-box-content">
-                                        <div class="my-info-social">
-                                            <ul>
-                                                <li><a href="#"><i class="fab fa-steam-symbol"></i> STEAM</a></li>
-                                                <li><a href="#"><i class="fab fa-facebook-square"></i> Facebook</a></li>
-                                                <li><a href="#"><i class="fab fa-twitter-square"></i> Twitter</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-6 col-sm-8">
-                                <div class="my-info-box mb-30">
-                                    <div class="my-info-box-top">
-                                        <h6>clan members</h6>
-                                        <img src="img/bg/my_info_box_hover.png" alt="" class="info-box-top-hover">
-                                    </div>
-                                    <div class="my-info-box-content">
-                                        <div class="my-clan-wrap">
-                                            <div class="clan-logo">
-                                                <img src="img/images/clan_logo.png" alt="">
-                                            </div>
-                                            <div class="my-clan-info">
-                                                <h4><span>75+</span> members</h4>
-                                                <span>active Members</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="col-xl-8 col-lg-9">
+                                <div class="live-match-wrap">
+                                    <img src="img/images/live_match_img.jpg" alt="">
+                                    <a href="https://www.youtube.com/watch?v=04KPiGmC7Lc" class="popup-video"><img src="img/icon/video_play_icon.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <!-- third-about-area-end -->
+                </section>
+                <!-- live-match-area-end -->
 
-            <!-- game-gallery-area -->
-            <div class="game-gallery-area position-relative">
-                <div class="game-gallery-bg"></div>
-                <div class="container-fluid p-0 fix">
-                    <div class="row game-gallery-active">
-                        <div class="col-12">
-                            <div class="game-gallery-item">
-                                <img src="img/images/game_gallery_01.png" alt="">
+                <!-- live-match-team-area -->
+                <section class="live-match-area fix pt-120 pb-110">
+                    <div class="container custom-container-two">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="live-match-team">
+                                    <img src="img/team/live_match_logo01.png" alt="">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="game-gallery-item">
-                                <img src="img/images/game_gallery_02.png" alt="">
+                            <div class="col-lg-4">
+                                <div class="live-match-time text-center">
+                                    <span>upcoming live matches</span>
+                                    <h2 class="time">08:30</h2>
+                                    <h2 class="live-overlay-text">live</h2>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="game-gallery-item">
-                                <img src="img/images/game_gallery_03.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="game-gallery-item">
-                                <img src="img/images/game_gallery_04.png" alt="">
+                            <div class="col-lg-4">
+                                <div class="live-match-team right">
+                                    <img src="img/team/live_match_logo02.png" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="slider-nav"></div>
+                </section>
+                <!-- live-match-team-area-end -->
+
             </div>
-            <!-- game-gallery-area-end -->
+            <!-- home-four-area-bg-end -->
 
-            <!-- my-match-area -->
-            <section class="my-match-area my-match-bg pb-120">
-                <div class="container custom-container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="third-section-title text-center mb-75">
-                                <h2>see <span>my</span> MATCHES</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="my-match-wrap">
-                                <div class="my-match-box-wrap wow fadeInDown" data-wow-delay=".2s">
-                                    <img src="img/bg/my_match_box.png" alt="" class="match-box-bg">
-                                    <ul>
-                                        <li>
-                                            <div class="my-match-team">
-                                                <div class="team-one">
-                                                    <a href="#"><img src="img/team/my_match_clan01.png" alt=""></a>
-                                                </div>
-                                                <div class="vs">
-                                                    <img src="img/team/match_vs02.png" alt="">
-                                                </div>
-                                                <div class="team-one">
-                                                    <a href="#"><img src="img/team/my_match_clan02.png" alt=""></a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="my-match-info">
-                                                <a href="https://www.twitch.tv/shroud" target="_blank" class="live-btn">Live MATCHES</a>
-                                                <h5>skyward sword</h5>
-                                                <span>10th Mar 2020.</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.twitch.tv/shroud" target="_blank" class="watch-stream"><i class="fas fa-podcast"></i> watch stream</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="my-match-box-wrap wow fadeInDown" data-wow-delay=".4s">
-                                    <img src="img/bg/my_match_box.png" alt="" class="match-box-bg">
-                                    <ul>
-                                        <li>
-                                            <div class="my-match-team">
-                                                <div class="team-one">
-                                                    <a href="#"><img src="img/team/my_match_clan03.png" alt=""></a>
-                                                </div>
-                                                <div class="vs">
-                                                    <img src="img/team/match_vs02.png" alt="">
-                                                </div>
-                                                <div class="team-one">
-                                                    <a href="#"><img src="img/team/my_match_clan04.png" alt=""></a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="my-match-info">
-                                                <a href="https://www.twitch.tv/shroud" target="_blank" class="live-btn">Live MATCHES</a>
-                                                <h5>Call Of Duty Mascot</h5>
-                                                <span>10th Mar 2020.</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.twitch.tv/shroud" target="_blank" class="watch-stream"><i class="fas fa-podcast"></i> watch stream</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="my-match-box-wrap wow fadeInDown" data-wow-delay=".6s">
-                                    <img src="img/bg/my_match_box.png" alt="" class="match-box-bg">
-                                    <ul>
-                                        <li>
-                                            <div class="my-match-team">
-                                                <div class="team-one">
-                                                    <a href="#"><img src="img/team/my_match_clan05.png" alt=""></a>
-                                                </div>
-                                                <div class="vs">
-                                                    <img src="img/team/match_vs02.png" alt="">
-                                                </div>
-                                                <div class="team-one">
-                                                    <a href="#"><img src="img/team/my_match_clan06.png" alt=""></a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="my-match-info">
-                                                <a href="https://www.twitch.tv/shroud" target="_blank" class="live-btn">Live MATCHES</a>
-                                                <h5>Counter Strike Mascot</h5>
-                                                <span>10th Mar 2020.</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.twitch.tv/shroud" target="_blank" class="watch-stream"><i class="fas fa-podcast"></i> watch stream</a>
-                                        </li>
-                                    </ul>
-                                </div>
+            <!-- featured-game-area -->
+            <section class="featured-game-area new-released-game-area pt-115 pb-90">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 col-md-8">
+                            <div class="section-title home-four-title black-title text-center mb-60">
+                                <h2>ALL RELEASED <span>GAMES</span></h2>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- my-match-area-end -->
-
-            <!-- donation-area -->
-            <section class="donation-area donation-bg fix pt-65">
-                <div class="container custom-container">
-                    <div class="donation-wrap">
-                        <div class="row align-items-center">
-                            <div class="col-xl-6 col-lg-7">
-                                <div class="donation-content">
-                                    <div class="third-title-style">
-                                        <h2>themebey<span>ond</span></h2>
-                                        <div class="inner">
-                                            <h2>WORLDS MEET REAL</h2>
-                                            <h6 class="vertical-title">donation</h6>
-                                            <p>The Legend of Zelda: Skyward Sword is an action-adventure game developed and publish game real.</p>
-                                        </div>
-                                        <a href="#" class="btn rotated-btn">buy Now</a>
+                <div class="container-fluid container-full">
+                    <div class="row no-gutters new-released-game-active">
+                        <div class="col-lg-3">
+                            <div class="featured-game-item mb-30">
+                                <div class="featured-game-thumb">
+                                    <img src="img/images/s_featured_game_thumb01.jpg" alt="">
+                                </div>
+                                <div class="featured-game-content">
+                                    <h4><a href="#">JUST FOR <span>GAMERS</span></a></h4>
+                                    <div class="featured-game-meta">
+                                        <i class="fas fa-bell"></i>
+                                        <span>Playstation 5 , Xbox</span>
+                                    </div>
+                                </div>
+                                <div class="featured-game-content featured-game-overlay-content">
+                                    <div class="featured-game-icon"><img src="img/icon/featured_game_icon.png" alt=""></div>
+                                    <h4><a href="#">JUST FOR <span>GAMERS</span></a></h4>
+                                    <div class="featured-game-meta">
+                                        <i class="fas fa-bell"></i>
+                                        <span>Playstation 5 , Xbox</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-5">
-                                <div class="donation-img text-center">
-                                    <img src="img/images/dontaion_img.png" alt="">
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="featured-game-item mb-30">
+                                <div class="featured-game-thumb">
+                                    <img src="img/images/s_featured_game_thumb02.jpg" alt="">
+                                </div>
+                                <div class="featured-game-content">
+                                    <h4><a href="#">Need FOR <span>Speed</span></a></h4>
+                                    <div class="featured-game-meta">
+                                        <i class="fas fa-bell"></i>
+                                        <span>Playstation 5 , Xbox</span>
+                                    </div>
+                                </div>
+                                <div class="featured-game-content featured-game-overlay-content">
+                                    <div class="featured-game-icon"><img src="img/icon/featured_game_icon.png" alt=""></div>
+                                    <h4><a href="#">Need FOR <span>Speed</span></a></h4>
+                                    <div class="featured-game-meta">
+                                        <i class="fas fa-bell"></i>
+                                        <span>Playstation 5 , Xbox</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="featured-game-item mb-30">
+                                <div class="featured-game-thumb">
+                                    <img src="img/images/s_featured_game_thumb03.jpg" alt="">
+                                </div>
+                                <div class="featured-game-content">
+                                    <h4><a href="#">egypt hunting <span>GAMERS</span></a></h4>
+                                    <div class="featured-game-meta">
+                                        <i class="fas fa-bell"></i>
+                                        <span>Playstation 5 , Xbox</span>
+                                    </div>
+                                </div>
+                                <div class="featured-game-content featured-game-overlay-content">
+                                    <div class="featured-game-icon"><img src="img/icon/featured_game_icon.png" alt=""></div>
+                                    <h4><a href="#">egypt hunting <span>GAMERS</span></a></h4>
+                                    <div class="featured-game-meta">
+                                        <i class="fas fa-bell"></i>
+                                        <span>Playstation 5 , Xbox</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="featured-game-item mb-30">
+                                <div class="featured-game-thumb">
+                                    <img src="img/images/s_featured_game_thumb04.jpg" alt="">
+                                </div>
+                                <div class="featured-game-content">
+                                    <h4><a href="#">JUST FOR <span>GAMERS</span></a></h4>
+                                    <div class="featured-game-meta">
+                                        <i class="fas fa-bell"></i>
+                                        <span>Playstation 5 , Xbox</span>
+                                    </div>
+                                </div>
+                                <div class="featured-game-content featured-game-overlay-content">
+                                    <div class="featured-game-icon"><img src="img/icon/featured_game_icon.png" alt=""></div>
+                                    <h4><a href="#">JUST FOR <span>GAMERS</span></a></h4>
+                                    <div class="featured-game-meta">
+                                        <i class="fas fa-bell"></i>
+                                        <span>Playstation 5 , Xbox</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="featured-game-item mb-30">
+                                <div class="featured-game-thumb">
+                                    <img src="img/images/s_featured_game_thumb02.jpg" alt="">
+                                </div>
+                                <div class="featured-game-content">
+                                    <h4><a href="#">Need FOR <span>Speed</span></a></h4>
+                                    <div class="featured-game-meta">
+                                        <i class="fas fa-bell"></i>
+                                        <span>Playstation 5 , Xbox</span>
+                                    </div>
+                                </div>
+                                <div class="featured-game-content featured-game-overlay-content">
+                                    <div class="featured-game-icon"><img src="img/icon/featured_game_icon.png" alt=""></div>
+                                    <h4><a href="#">Need FOR <span>Speed</span></a></h4>
+                                    <div class="featured-game-meta">
+                                        <i class="fas fa-bell"></i>
+                                        <span>Playstation 5 , Xbox</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- donation-area-end -->
+            <!-- featured-game-area-end -->
 
-            <!-- team-area -->
-            <section class="team-area team-bg">
-                <div class="container custom-container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="third-section-title text-center mb-60">
-                                <h2>MEET <span>OUR</span> TEAM</h2>
+            
+
+            <!-- blog-area -->
+            <section class="blog-area pt-115 pb-120">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6 col-lg-8">
+                            <div class="section-title home-four-title black-title text-center mb-65">
+                                <h2>Latest News & <span>Articles</span></h2>
+                                <p>Compete with 100 players on a remote island for winner takes showdown known issue where certain skin strategic</p>
                             </div>
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                            <div class="third-team-item text-center mb-30">
-                                <div class="third-team-img">
-                                    <img src="img/team/team_img01.png" alt="">
+                        <div class="col-lg-4 col-md-6 col-sm-9">
+                            <div class="blog-post home-four-blog-post mb-50">
+                                <div class="blog-thumb mb-30">
+                                    <a href="#"><img src="img/blog/home_four_blog_thumb01.jpg" alt=""></a>
                                 </div>
-                                <div class="third-team-content">
-                                    <div class="main-bg"></div>
-                                    <div class="hover-bg"></div>
-                                    <h5><a href="#">Jannie Visscher</a></h5>
-                                    <span>weapon master</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                            <div class="third-team-item text-center mb-30">
-                                <div class="third-team-img">
-                                    <img src="img/team/team_img02.png" alt="">
-                                </div>
-                                <div class="third-team-content">
-                                    <div class="main-bg"></div>
-                                    <div class="hover-bg"></div>
-                                    <h5><a href="#">warren buffett</a></h5>
-                                    <span>team leader</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                            <div class="third-team-item text-center mb-30">
-                                <div class="third-team-img">
-                                    <img src="img/team/team_img03.png" alt="">
-                                </div>
-                                <div class="third-team-content">
-                                    <div class="main-bg"></div>
-                                    <div class="hover-bg"></div>
-                                    <h5><a href="#">anne hathaway</a></h5>
-                                    <span>weapon master</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8">
-                            <div class="third-team-item text-center mb-30">
-                                <div class="third-team-img">
-                                    <img src="img/team/team_img04.png" alt="">
-                                </div>
-                                <div class="third-team-content">
-                                    <div class="main-bg"></div>
-                                    <div class="hover-bg"></div>
-                                    <h5><a href="#">poll worker</a></h5>
-                                    <span>team member</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- team-area-end -->
-
-            <!-- contact-area -->
-            <section class="contact-area third-contact-bg">
-                <div class="container custom-container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="third-contact-wrap">
-                                <div class="third-title-style">
-                                    <h2>contact<span>us</span></h2>
-                                    <div class="inner">
-                                        <h2>MEET oue team</h2>
-                                        <h6 class="vertical-title">donation</h6>
+                                <div class="blog-post-content">
+                                    <div class="blog-meta">
                                         <ul>
-                                            <li><span>our location :</span> Central Park Roselle W78 New Jersey</li>
-                                            <li><span>Phone :</span> + 97 325 6254 324</li>
+                                            <li><i class="far fa-user"></i><a href="#">Admin</a></li>
+                                            <li><i class="far fa-calendar-alt"></i>september 19, 2020</li>
                                         </ul>
                                     </div>
-                                    <a href="#" class="btn rotated-btn">buy Now</a>
+                                    <h4><a href="#">Shooter action video</a></h4>
+                                    <p>Compete with 100 players on a remote island thats winner takes showdown known issue.</p>
+                                    <a href="blog-details.html" class="read-more">Read More <i class="fas fa-caret-right"></i></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <form action="#" class="third-contact-form">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <input type="text" placeholder="Your Name">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" placeholder="Your Phone">
-                                    </div>
+                        <div class="col-lg-4 col-md-6 col-sm-9">
+                            <div class="blog-post home-four-blog-post mb-50">
+                                <div class="blog-thumb mb-30">
+                                    <a href="#"><img src="img/blog/home_four_blog_thumb02.jpg" alt=""></a>
                                 </div>
-                                <textarea name="message" id="message" placeholder="Wight Message"></textarea>
-                                <button class="btn rotated-btn">submit</button>
-                            </form>
+                                <div class="blog-post-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li><i class="far fa-user"></i><a href="#">Admin</a></li>
+                                            <li><i class="far fa-calendar-alt"></i>september 19, 2020</li>
+                                        </ul>
+                                    </div>
+                                    <h4><a href="#">THE WALKING DEAD</a></h4>
+                                    <p>Compete with 100 players on a remote island thats winner takes showdown known issue.</p>
+                                    <a href="blog-details.html" class="read-more">Read More <i class="fas fa-caret-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-9">
+                            <div class="blog-post home-four-blog-post mb-50">
+                                <div class="blog-thumb mb-30">
+                                    <a href="#"><img src="img/blog/home_four_blog_thumb03.jpg" alt=""></a>
+                                </div>
+                                <div class="blog-post-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li><i class="far fa-user"></i><a href="#">Admin</a></li>
+                                            <li><i class="far fa-calendar-alt"></i>september 19, 2020</li>
+                                        </ul>
+                                    </div>
+                                    <h4><a href="#">DEFENSE OF THE ANCIENTS</a></h4>
+                                    <p>Compete with 100 players on a remote island thats winner takes showdown known issue.</p>
+                                    <a href="blog-details.html" class="read-more">Read More <i class="fas fa-caret-right"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- contact-area-end -->
-
-            <!-- brand-area -->
-            <div class="brand-area t-brand-bg">
-                <div class="container custom-container">
-                    <div class="row s-brand-active">
-                        <div class="col-12">
-                            <div class="t-brand-item">
-                                <img src="img/brand/t_brand_logo01.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="t-brand-item">
-                                <img src="img/brand/t_brand_logo02.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="t-brand-item">
-                                <img src="img/brand/t_brand_logo03.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="t-brand-item">
-                                <img src="img/brand/t_brand_logo04.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="t-brand-item">
-                                <img src="img/brand/t_brand_logo05.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="t-brand-item">
-                                <img src="img/brand/t_brand_logo03.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- brand-area-end -->
+            <!-- blog-area-end -->
 
         </main>
         <!-- main-area-end -->
 
         <!-- footer-area -->
-       <?php include('Linked-packages/footer.php');?>
+<?php include('Linked-packages/footer.php');?>        
         <!-- footer-area-end -->
 
 
 
 
 
-		<!-- JS here -->
-        <script src="js/vendor/jquery-3.4.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/isotope.pkgd.min.js"></script>
-        <script src="js/slick.min.js"></script>
-        <script src="js/jquery.meanmenu.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/aos.js"></script>
-        <script src="js/jquery.lettering.js"></script>
-        <script src="js/jquery.textillate.js"></script>
-        <script src="js/jquery.odometer.min.js"></script>
-        <script src="js/jquery.appear.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/jquery.countdown.min.js"></script>
-        <script src="js/jquery.scrollUp.min.js"></script>
-        <script src="js/imagesloaded.pkgd.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+		<?php include('Linked-packages/jsScripts.php');?>
     </body>
 </html>
