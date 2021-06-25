@@ -63,25 +63,17 @@
                                        
                                       
                                         <div class="col-md-6">
-                                        <input list="brow">
+                                        <input list="game_subcategories"  placeholder="Select Subcategory">
 
                                         <?php 
                                             $sql = "SELECT * FROM `game_subcategories`";
                                             $result = mysqli_query($conn, $sql);
+                                            if (mysqli_num_rows($result) > 0) {?>
 
-                                            if (mysqli_num_rows($result) > 0) {
-                                            // output data of each row
-                                            // while($row = mysqli_fetch_assoc($result)) {
-                                            
-                                            ?>
-
-
-                                                    <datalist id="brow">
+                                                    <datalist id="game_subcategories">
                                                 <?php while($row = mysqli_fetch_array($result)) { ?>
-                                                    echo "<option>$row[category_name]</option>";
-                                                <?php }}else{
-                                                    echo $sql;
-                                                } ?>
+                                                    <option value="<?php echo $row['category_name']?>"><?php echo $row['category_name']?></option>;
+                                                <?php } } ?>
                                             </datalist>
                                            
                                         </div>
