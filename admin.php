@@ -37,7 +37,7 @@
 
             <!-- contact-area -->
             <?php
-            error_reporting(0);
+            // error_reporting(0);
             ?>
             <section class="contact-area pt-120 pb-120">
                 <div class="container">
@@ -60,16 +60,38 @@
                                          <div class="col-md-6">
                                             <input type="text" placeholder="Title" name="title" required>
                                         </div>
+                                       
+                                      
                                         <div class="col-md-6">
+                                        <input list="brow">
+
+                                        <?php 
+                                            $sql = "SELECT * FROM `game_subcategories`";
+                                            $result = mysqli_query($conn, $sql);
+
+                                            if (mysqli_num_rows($result) > 0) {
+                                            // output data of each row
+                                            // while($row = mysqli_fetch_assoc($result)) {
+                                            
+                                            ?>
+
+
+                                                    <datalist id="brow">
+                                                <?php while($row = mysqli_fetch_array($result)) { ?>
+                                                    echo "<option>$row[category_name]</option>";
+                                                <?php }}else{
+                                                    echo $sql;
+                                                } ?>
+                                            </datalist>
                                            
-                                            <input type="text" placeholder="Categories" name="Categories" required>
                                         </div>
+                                       
                                         <div class="col-md-12">
                                             <input type="file" name="Uploadfile" value="" required>
                                         </div>
 
-                                    </div>      
-<input type="submit" name="submit" value="submit"/>
+                                    </div>  
+                                    <input type="submit" name="submit" value="submit"/>
                                 </form>
                                   
                             </div>
@@ -83,7 +105,7 @@
             <?php
             
      
-             if($_POST['submit'])
+             if(isset($_POST['submit']))
              {
                 
                 $name=$_POST['title'];
