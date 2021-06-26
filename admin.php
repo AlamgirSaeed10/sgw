@@ -1,3 +1,11 @@
+<?php session_start();
+if($_SESSION['username'])
+{
+    
+
+
+
+?>
 <!doctype html>
 <html class="no-js" lang="">
     <head>
@@ -63,7 +71,7 @@
                                        
                                       
                                         <div class="col-md-6">
-                                        <input list="game_subcategories"  placeholder="Select Subcategory">
+                                        <input list="game_subcategories" name="game_subcategories" placeholder="Select Subcategory">
 
                                         <?php 
                                             $sql = "SELECT * FROM `game_subcategories`";
@@ -99,11 +107,22 @@
      
              if(isset($_POST['submit']))
              {
+
                 
                 $name=$_POST['title'];
-                $category=$_POST['Categories'];
+                $category=$_POST['game_subcategories'];
                 $filename=$_FILES["Uploadfile"]["name"];
                 $tempname=$_FILES["Uploadfile"]["tmp_name"];
+
+
+                $query="SELECT * FROM latest_games WHERE `game_title` = '$name'";
+                $data= mysqli_query($conn, $query);
+                if (mysqli_num_rows($data) > 0) {
+                    echo "Error".$name;
+                }else{
+
+
+
                 $folder="lgimage/".$filename;
                 move_uploaded_file($tempname,$folder);
                 
@@ -125,6 +144,7 @@
                 else{
                 echo " All fields required";
             }
+        }
 
 
              }
@@ -150,3 +170,9 @@
         
     </body>
 </html>
+<?php
+}
+else{
+    header('location:login.php');
+}
+?>

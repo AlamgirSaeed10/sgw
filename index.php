@@ -22,9 +22,17 @@
 
             <!-- slider-area -->
             <section class="slider-area home-four-slider">
+            <video  style="position: absolute;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;"
+                    src="img/slider/PS4 - Ghost Recon Breakpoint Trailer (2019).mp4" type="video/mp4" autoplay="auto"  muted playsinline="" loop="" preload="auto" class="sc-qYsuA jDsubJ"></video> 
                 <div class="slider-active ">
                     <div class="single-slider slider-bg slider-style-two">
+                     
                         <div class="container custom-container-two">
+                        
                             <div class="row">
                                 <div class="col-xl-6 col-lg-7 col-md-11">
                                     <div class="slider-content">
@@ -35,7 +43,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="slider-img"><img src="img/slider/command.jpg" alt="" data-animation="slideInRightS" data-delay=".8s"></div>
+                            <div class="slider-img"></div>
                         </div>
                     </div>
                     <div class="single-slider slider-bg slider-style-two">
@@ -50,7 +58,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="slider-img"><img src="img/slider/slide1.jpg" alt="" data-animation="slideInRightS" data-delay=".8s"></div>
+                            <div class="slider-img"></div>
                         </div>
                     </div>
                     <div class="single-slider slider-bg slider-style-two">
@@ -65,7 +73,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="slider-img"><img src="img/slider/1595255375465.jpg" alt="" data-animation="slideInRightS" data-delay=".8s"></div>
+                            <div class="slider-img"></div>
                         </div>
                     </div>
                 </div>
@@ -319,60 +327,62 @@
                         </div>
                     </div>
                     <div class="row justify-content-center">
+                    <?php
+                    $link = "";
+                    $title = "";
+                    $pubDate = "";
+                    $category ="";
+                    $description ="";
+                    
+                    $map_url = "https://www.techrepublic.com/rssfeeds/topic/big-data/"; 
+                    if (($response_xml_data = file_get_contents($map_url))===false){
+                        echo "Error fetching XML\n";
+                    } else {
+                    libxml_use_internal_errors(true);
+                    $data = simplexml_load_string($response_xml_data);
+                    if (!$data) {
+                        echo "Error loading XML\n";
+                        foreach(libxml_get_errors() as $error) {
+                            echo "\t", $error->message;
+                        }
+                    } else {
+                        $category  =  $data->channel->category;
+                        for ($i=0; $i <3; $i++) { 
+                        foreach($data->channel->item as $item)
+                        {
+                                # code...
+                            
+                            $link =  (string)$item->link;
+                            $name = $item->children('media', true)->credit;
+
+                            $title = (string)$item->title;
+                            $pubDate = (string)$item->pubDate;
+                            $description = (string)$item->description;
+                            }
+                            ?>
                         <div class="col-lg-4 col-md-6 col-sm-9">
                             <div class="blog-post home-four-blog-post mb-50">
-                                <div class="blog-thumb mb-30">
-                                    <a href="#"><img src="img/blog/home_four_blog_thumb01.jpg" alt=""></a>
-                                </div>
+                                
+                               
                                 <div class="blog-post-content">
                                     <div class="blog-meta">
+                                    <h4><a href="#"><?php echo $title;?></a></h4>
                                         <ul>
-                                            <li><i class="far fa-user"></i><a href="#">Admin</a></li>
-                                            <li><i class="far fa-calendar-alt"></i>september 19, 2020</li>
+                                            <li><i class="far fa-user"></i><a href="#"><?php echo $name; ?></a></li>
+                                            <li><i class="far fa-calendar-alt"></i><?php echo " ".$pubDate;?></li>
                                         </ul>
                                     </div>
-                                    <h4><a href="#">Shooter action video</a></h4>
-                                    <p>Compete with 100 players on a remote island thats winner takes showdown known issue.</p>
-                                    <a href="blog-details.html" class="read-more">Read More <i class="fas fa-caret-right"></i></a>
+                                    
+                                    <p><?php echo $description; ?></p>
+                                    <a href="<?php echo $link;?>" class="read-more">Read More <i class="fas fa-caret-right"></i></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-9">
-                            <div class="blog-post home-four-blog-post mb-50">
-                                <div class="blog-thumb mb-30">
-                                    <a href="#"><img src="img/blog/home_four_blog_thumb02.jpg" alt=""></a>
-                                </div>
-                                <div class="blog-post-content">
-                                    <div class="blog-meta">
-                                        <ul>
-                                            <li><i class="far fa-user"></i><a href="#">Admin</a></li>
-                                            <li><i class="far fa-calendar-alt"></i>september 19, 2020</li>
-                                        </ul>
-                                    </div>
-                                    <h4><a href="#">THE WALKING DEAD</a></h4>
-                                    <p>Compete with 100 players on a remote island thats winner takes showdown known issue.</p>
-                                    <a href="blog-details.html" class="read-more">Read More <i class="fas fa-caret-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-9">
-                            <div class="blog-post home-four-blog-post mb-50">
-                                <div class="blog-thumb mb-30">
-                                    <a href="#"><img src="img/blog/home_four_blog_thumb03.jpg" alt=""></a>
-                                </div>
-                                <div class="blog-post-content">
-                                    <div class="blog-meta">
-                                        <ul>
-                                            <li><i class="far fa-user"></i><a href="#">Admin</a></li>
-                                            <li><i class="far fa-calendar-alt"></i>september 19, 2020</li>
-                                        </ul>
-                                    </div>
-                                    <h4><a href="#">DEFENSE OF THE ANCIENTS</a></h4>
-                                    <p>Compete with 100 players on a remote island thats winner takes showdown known issue.</p>
-                                    <a href="blog-details.html" class="read-more">Read More <i class="fas fa-caret-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php   
+              }
+              }
+            }
+            ?>
                     </div>
                 </div>
             </section>

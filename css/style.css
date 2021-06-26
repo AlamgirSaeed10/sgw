@@ -152,9 +152,9 @@ li {
 	list-style: none
 }
 p {
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: 500;
-	line-height: 28px;
+	line-height: 25px;
 	color: #cbcbcb;
 	margin-bottom: 15px;
 }
@@ -272,7 +272,7 @@ label {
 .btn.btn-style-two {
 	background: transparent;
 	padding: 20px 35px;
-	margin: 0 8px;
+	margin: 67 8px;
 }
 .btn.btn-style-two::before {
 	content: "";
@@ -912,7 +912,7 @@ ul.minicart .cart-price .new {
     max-width: 1330px;
 }
 .custom-container-two {
-    max-width: 1430px;
+    max-width: 100%;
 }
 .third-header-bg .navbar-wrap ul li.show a::before,
 .third-header-bg .navbar-wrap ul li a::before {
@@ -1229,12 +1229,14 @@ ul.minicart .cart-price .new {
 /* 5. Slider */
 .slider-bg {
 	/* background-image: url(../img/slider/slider_bg.jpg); */
+	margin-left: 3%;
 	background-position: center;
 	background-size: cover;
 	padding: 260px 0;
 }
 
 .slider-content h6 {
+	margin-top: 75px;
 	font-size: 22px;
 	font-weight: 700;
 	margin-bottom: 25px;
@@ -1290,7 +1292,7 @@ ul.minicart .cart-price .new {
 	line-height: 1.6;
 }
 .slider-style-two {
-	background-image: url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+
 	padding: 290px 0 190px;
 	position: relative;
 	z-index: 1;
@@ -1452,8 +1454,7 @@ ul.minicart .cart-price .new {
 	position: relative;
 	z-index: 1;
 }
-.third-banner-img::after {
-    content: "";
+.third-banner-img::after {    content: "";
     position: absolute;
     left: 0;
     bottom: -20px;
@@ -1469,10 +1470,12 @@ ul.minicart .cart-price .new {
     z-index: 1;
 }
 .home-four-slider .slider-bg {
-     background-image: url(../img/slider/AdvancedHeavenlyAmericanriverotter-size_restricted.gif); 
+
+	margin-top: -150px;
+
     background-position: center;
     background-size: cover;
-    padding: 205px 0 205px;
+    padding: 225px 0 230px;
 }
 .home-four-slider .custom-container-two {
 	position: relative;
@@ -3024,6 +3027,7 @@ ul.minicart .cart-price .new {
 	left: auto;
 }
 .product-active .slick-track {
+	
 	padding-bottom: 30px;
 	padding-top: 30px;
 }
@@ -3973,10 +3977,10 @@ ul.minicart .cart-price .new {
 	color: #a5a4a4;
 }
 .home-four-blog-post .blog-post-content h4 {
-    font-size: 22px;
-    text-transform: uppercase;
+    font-size: 20px;
+    /* text-transform: uppercase; */
     color: #282828;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 }
 .home-four-blog-post .blog-post-content p {
     color: #6c6c6c;
