@@ -321,7 +321,7 @@
                         <div class="col-lg-3 col-sm-6">
                             <div class="team-member-box text-center mb-50">
                                 <div class="team-member-thumb">
-                                    <img src="img/team/team_member01.jpg" alt="">
+                                    <img src="img/team/saqib.png" alt="">
                                     <div class="team-member-social">
                                         <ul>
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -332,8 +332,8 @@
                                     </div>
                                 </div>
                                 <div class="team-member-content">
-                                    <h4><a href="#">tomas aleman</a></h4>
-                                    <span>Marketing CEO</span>
+                                    <h4><a href="#">Saqib Kazmi</a></h4>
+                                    <span>3D modeller</span>
                                 </div>
                             </div>
                         </div>
