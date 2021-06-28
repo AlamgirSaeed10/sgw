@@ -147,8 +147,8 @@
                         <div class="row justify-content-center">
                             <div class="col-xl-8 col-lg-9">
                                 <div class="live-match-wrap">
-                                    <img src="img/images/live_match_img.jpg" alt="">
-                                    <a href="https://www.youtube.com/watch?v=04KPiGmC7Lc" class="popup-video"><img src="img/icon/video_play_icon.png" alt=""></a>
+                                    <img src="img/slider/video.jpg" alt="">
+                                    <a href="https://www.youtube.com/watch?v=y-9_d3IT_yA" class="popup-video"><img src="img/icon/video_play_icon.png" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -156,31 +156,7 @@
                 </section>
                 <!-- live-match-area-end -->
 
-                <!-- live-match-team-area -->
-                <section class="live-match-area fix pt-120 pb-110">
-                    <div class="container custom-container-two">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="live-match-team">
-                                    <img src="img/team/live_match_logo01.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="live-match-time text-center">
-                                    <span>upcoming live matches</span>
-                                    <h2 class="time">08:30</h2>
-                                    <h2 class="live-overlay-text">live</h2>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="live-match-team right">
-                                    <img src="img/team/live_match_logo02.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- live-match-team-area-end -->
+                
 
             </div>
             <!-- home-four-area-bg-end -->
@@ -198,116 +174,42 @@
                 </div>
                 <div class="container-fluid container-full">
                     <div class="row no-gutters new-released-game-active">
+                    <?php 
+        $sql = "SELECT * FROM `latest_games`";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+          // output data of each row
+          while($row = mysqli_fetch_assoc($result)) {
+         
+          ?>
                         <div class="col-lg-3">
                             <div class="featured-game-item mb-30">
                                 <div class="featured-game-thumb">
-                                    <img src="img/images/s_featured_game_thumb01.jpg" alt="">
+                                    <img src="<?php echo $row['image']?>" height='400' width='100' alt="">
                                 </div>
                                 <div class="featured-game-content">
-                                    <h4><a href="#">JUST FOR <span>GAMERS</span></a></h4>
+                                    <h4><a href="#"><?php echo $row["game_title"] ?> </a></h4>
                                     <div class="featured-game-meta">
                                         <i class="fas fa-bell"></i>
-                                        <span>Playstation 5 , Xbox</span>
+                                        <span><?php echo $row["Platform"] ?> , <?php echo $row["categories"]?></span>
                                     </div>
                                 </div>
                                 <div class="featured-game-content featured-game-overlay-content">
                                     <div class="featured-game-icon"><img src="img/icon/featured_game_icon.png" alt=""></div>
-                                    <h4><a href="#">JUST FOR <span>GAMERS</span></a></h4>
+                                    <h4><a href="#"><?php echo $row["game_title"] ?> </a></h4>
                                     <div class="featured-game-meta">
                                         <i class="fas fa-bell"></i>
-                                        <span>Playstation 5 , Xbox</span>
+                                        <span><?php echo $row["Platform"] ?> , <?php echo $row["categories"]?></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
-                            <div class="featured-game-item mb-30">
-                                <div class="featured-game-thumb">
-                                    <img src="img/images/s_featured_game_thumb02.jpg" alt="">
-                                </div>
-                                <div class="featured-game-content">
-                                    <h4><a href="#">Need FOR <span>Speed</span></a></h4>
-                                    <div class="featured-game-meta">
-                                        <i class="fas fa-bell"></i>
-                                        <span>Playstation 5 , Xbox</span>
-                                    </div>
-                                </div>
-                                <div class="featured-game-content featured-game-overlay-content">
-                                    <div class="featured-game-icon"><img src="img/icon/featured_game_icon.png" alt=""></div>
-                                    <h4><a href="#">Need FOR <span>Speed</span></a></h4>
-                                    <div class="featured-game-meta">
-                                        <i class="fas fa-bell"></i>
-                                        <span>Playstation 5 , Xbox</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="featured-game-item mb-30">
-                                <div class="featured-game-thumb">
-                                    <img src="img/images/s_featured_game_thumb03.jpg" alt="">
-                                </div>
-                                <div class="featured-game-content">
-                                    <h4><a href="#">egypt hunting <span>GAMERS</span></a></h4>
-                                    <div class="featured-game-meta">
-                                        <i class="fas fa-bell"></i>
-                                        <span>Playstation 5 , Xbox</span>
-                                    </div>
-                                </div>
-                                <div class="featured-game-content featured-game-overlay-content">
-                                    <div class="featured-game-icon"><img src="img/icon/featured_game_icon.png" alt=""></div>
-                                    <h4><a href="#">egypt hunting <span>GAMERS</span></a></h4>
-                                    <div class="featured-game-meta">
-                                        <i class="fas fa-bell"></i>
-                                        <span>Playstation 5 , Xbox</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="featured-game-item mb-30">
-                                <div class="featured-game-thumb">
-                                    <img src="img/images/s_featured_game_thumb04.jpg" alt="">
-                                </div>
-                                <div class="featured-game-content">
-                                    <h4><a href="#">JUST FOR <span>GAMERS</span></a></h4>
-                                    <div class="featured-game-meta">
-                                        <i class="fas fa-bell"></i>
-                                        <span>Playstation 5 , Xbox</span>
-                                    </div>
-                                </div>
-                                <div class="featured-game-content featured-game-overlay-content">
-                                    <div class="featured-game-icon"><img src="img/icon/featured_game_icon.png" alt=""></div>
-                                    <h4><a href="#">JUST FOR <span>GAMERS</span></a></h4>
-                                    <div class="featured-game-meta">
-                                        <i class="fas fa-bell"></i>
-                                        <span>Playstation 5 , Xbox</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="featured-game-item mb-30">
-                                <div class="featured-game-thumb">
-                                    <img src="img/images/s_featured_game_thumb02.jpg" alt="">
-                                </div>
-                                <div class="featured-game-content">
-                                    <h4><a href="#">Need FOR <span>Speed</span></a></h4>
-                                    <div class="featured-game-meta">
-                                        <i class="fas fa-bell"></i>
-                                        <span>Playstation 5 , Xbox</span>
-                                    </div>
-                                </div>
-                                <div class="featured-game-content featured-game-overlay-content">
-                                    <div class="featured-game-icon"><img src="img/icon/featured_game_icon.png" alt=""></div>
-                                    <h4><a href="#">Need FOR <span>Speed</span></a></h4>
-                                    <div class="featured-game-meta">
-                                        <i class="fas fa-bell"></i>
-                                        <span>Playstation 5 , Xbox</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                                   }
+        } 
+?>
+                        
                     </div>
                 </div>
             </section>

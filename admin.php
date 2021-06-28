@@ -68,8 +68,11 @@ if($_SESSION['username'])
                                          <div class="col-md-6">
                                             <input type="text" placeholder="Title" name="title" required>
                                         </div>
-                                       
-                                      
+                                        <div class="col-md-6">
+                                           <input type="text" placeholder="Description" name="description" required>
+                                       </div>
+                                        
+                                        
                                         <div class="col-md-6">
                                         <input list="game_subcategories" name="game_subcategories" placeholder="Select Subcategory">
 
@@ -86,8 +89,14 @@ if($_SESSION['username'])
                                            
                                         </div>
                                        
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <input type="file" name="Uploadfile" value="" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" placeholder="Platform" name="platform" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="date" placeholder="Date" name="date" required>
                                         </div>
 
                                     </div>  
@@ -110,7 +119,10 @@ if($_SESSION['username'])
 
                 
                 $name=$_POST['title'];
+                $description=$_POST['description'];
                 $category=$_POST['game_subcategories'];
+                $platform=$_POST['platform'];
+                $date=$_POST['date'];
                 $filename=$_FILES["Uploadfile"]["name"];
                 $tempname=$_FILES["Uploadfile"]["tmp_name"];
 
@@ -132,7 +144,7 @@ if($_SESSION['username'])
                    
                     
                   
-                    $query="INSERT INTO latest_games VALUES('','$name','$folder','$category')";
+                    $query="INSERT INTO latest_games VALUES('','$name','$description','$folder','$category','$platform','$date')";
                     $data= mysqli_query($conn, $query);
                     if($data){
                     
