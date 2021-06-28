@@ -60,9 +60,9 @@
                         <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
-                                    <form action="search.php" method="post" autocomplete="off">
-                                        <input type="text" name='search' placeholder="Search here...">
-                                        <button><i class="fa fa-search"></i></button>
+                                <form action="search.php" method="GET" autocomplete="off">
+                                        <input type="text" name='search' id="search" placeholder="Search here..." required>
+                                        <button type="submit"><i class="fa fa-search"></i></button>
                                     </form>
                                 </div>
                             </div>
