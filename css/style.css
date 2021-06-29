@@ -211,6 +211,9 @@ label {
 .separator {
 	border-top: 1px solid #f2f2f2
 }
+.my-class{
+	text-align: center;
+}
 /* button style */
 .btn {
 	/* -moz-user-select: none; */
@@ -223,7 +226,7 @@ label {
 	font-weight: 700;
 	letter-spacing: 0;
 	line-height: 1;
-	margin-bottom: 0;
+	margin: 0px 5px 0px 5px;
 	padding: 20px 44px;
 	text-align: center;
 	text-transform: uppercase;
