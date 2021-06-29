@@ -256,13 +256,8 @@ $rs_result= mysqli_query($conn, $sql);
         <!-- main-area-end -->
 
        <!-- footer-area -->
-<?php include('Linked-packages/footer.php');?>        
-        <!-- footer-area-end -->
-
-
-
-
-
+       <?php include('Linked-packages/footer.php');?>        
+       <!-- footer-area-end -->
 		<?php include('Linked-packages/jsScripts.php');?>
 
         
