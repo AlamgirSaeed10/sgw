@@ -1,6 +1,41 @@
 
             <header class="header-style-four">
-            <div class="header-top-area s-header-top-area d-none d-lg-block">
+            <div class="header-top-area d-none d-lg-block">
+                <div class="container-fluid container-full-padding">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <div class="header-top-offer">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="header-top-right">
+                                <div class="header-social">
+                                    <ul>
+                                    <li><a href="https://www.facebook.com/Shah-Game-World-105430321793389"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.instagram.com/shahgameworld786/"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/shah-game-world"><i class="fab fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="header-top-action">
+                                    <ul>
+                                        <li>
+                                            <div class="header-top-mail">
+                                                <p><span>|</span><i class="far fa-envelope-open"></i><a href="mailto:info@shahgameworld.com">info@shahgameworld.com</a></p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="header-user-login">
+                                                <a href="career.php"><i class="fa fa-briefcase"></i>Apply for Job</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="header-top-area s-header-top-area d-none d-lg-block">
                 <div class="container custom-container-two">
                     <div class="row align-items-center">
                         <div class="col-lg-6 d-none d-lg-block">
@@ -18,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div id="sticky-header" class="header-four-wrap">
                 <div class="container custom-container-two">
                     <div class="row">

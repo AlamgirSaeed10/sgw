@@ -22,7 +22,7 @@
 
             <!-- slider-area -->
             <section class="slider-area home-four-slider">
-            <video  style="position: absolute;
+              <video  style="position: absolute;
                     object-fit: cover;
                     width: 100%;
                     height: 100%;
@@ -43,7 +43,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="slider-img"></div>
+                            <!-- <div class="slider-img"></div> -->
                         </div>
                     </div>
                     <div class="single-slider slider-bg slider-style-two">
@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="slider-img"></div>
+                            <!-- <div class="slider-img"></div> -->
                         </div>
                     </div>
                     <div class="single-slider slider-bg slider-style-two">
@@ -73,7 +73,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="slider-img"></div>
+                            <!-- <div class="slider-img"></div> -->
                         </div>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
             <div class="home-four-area-bg">
                 <div class="bg"></div>
                 <!-- latest-games-area -->
-                <section class="latest-games-area home-four-latest-games pt-120">
+                <section class="latest-games-area home-four-latest-games pt-50">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6 col-md-8">
@@ -100,17 +100,13 @@
                             <div class="col-12">
                                 <div class="latest-games-active owl-carousel">
                                     <?php 
-        $sql = "SELECT * FROM `latest_games`";
-        $result = mysqli_query($conn, $sql);
+                                        $sql = "SELECT * FROM `latest_games`";
+                                        $result = mysqli_query($conn, $sql);
 
-        if (mysqli_num_rows($result) > 0) {
-          // output data of each row
-          while($row = mysqli_fetch_assoc($result)) {
-         
-          ?>
-            <!-- $row["game_title"].$row["image"].$row["categories"]."<br/>";  -->
-        
-
+                                        if (mysqli_num_rows($result) > 0) {
+                                        // output data of each row
+                                        while($row = mysqli_fetch_assoc($result)) {?>
+                                          
                                     <div class="latest-games-items mb-30">
                                         <div class="latest-games-thumb">
                                             <a href="#"><img src="<?php echo $row['image']?>" height='400' width='100' alt=""></a>
@@ -120,70 +116,71 @@
                                                 <a href="#"><?php echo $row["categories"]?></a>
                                             </div>
                                             <h4><a href="#"><?php echo $row["game_title"] ?></a></h4>
-                                            <p>entry fee : <span>free</span></p>
                                         </div>
                                     </div>
-                                       <?php
-                                   }
-        } 
-?>
+                                       <?php } } ?>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- latest-games-area-end -->
-
-                <!-- live-match-area -->
-                <section class="live-match-area pt-90">
+                <section class="about-us-area pt-90 pb-120">
                     <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-6 col-md-8">
-                                <div class="section-title home-four-title text-center mb-60">
-                                    <h2>watch live <span>match</span></h2>
+                        <div class="row">
+                            <div class="col-lg-6 order-0 order-lg-2">
+                                <div class="about-img">
+                                    <img src="img/bg/about_bg_img.jpg" alt="video playback image">
+                                    <a href="https://www.youtube.com/watch?v=_LTiEXMc5J0" class="popup-video"><img src="img/icon/play_btn.png"  alt=""></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-xl-8 col-lg-9">
-                                <div class="live-match-wrap">
-                                    <img src="img/slider/video.jpg" alt="">
-                                    <a href="https://www.youtube.com/watch?v=y-9_d3IT_yA" class="popup-video"><img src="img/icon/video_play_icon.png" alt=""></a>
+                            <div class="col-lg-6">
+                                <div class="section-title title-style-two mb-45">
+                                    <span>about story</span>
+                                    <h2>Shah <span>Game</span> World</h2>
+                                </div>
+                                <div class="about-content">
+                                    <p>Find technology or people for digital projects in public sector and Find an individual specialist develo researcher.</p>
+                                    <p>Consectur adipiscing elit, sed do eiusmod tempor incididunt labore dolore mana aliqua. Unimd minim venam quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip commodo cpsam.</p>
+                                    <div class="about-btn">
+                                        <a href="about-us.php" class="btn">READ MORE</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <!-- live-match-area-end -->
 
-                
 
             </div>
             <!-- home-four-area-bg-end -->
 
             <!-- featured-game-area -->
-            <section class="featured-game-area new-released-game-area pt-115 pb-90">
+            <section class="featured-game-area new-released-game-area pt-20 pb-90">
                 <div class="container">
-                    <div class="row justify-content-center">
+                    <div class="row">
                         <div class="col-lg-6 col-md-8">
-                            <div class="section-title home-four-title black-title text-center mb-60">
+                            
+                        <div class="section-title home-four-title mb-50">
+                                    <span>LATEST RELEASES</span>
+                                    <h2>Create & <span>Manage</span></h2>
+                                </div>
+                            <!-- <div class="section-title home-four-title black-title text-center mb-60">
                                 <h2>ALL RELEASED <span>GAMES</span></h2>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="container-fluid container-full">
                     <div class="row no-gutters new-released-game-active">
                     <?php 
-        $sql = "SELECT * FROM `latest_games`";
-        $result = mysqli_query($conn, $sql);
-
-        if (mysqli_num_rows($result) > 0) {
-          // output data of each row
-          while($row = mysqli_fetch_assoc($result)) {
-         
-          ?>
-                        <div class="col-lg-3">
+                        $sql = "SELECT * FROM `latest_games`";
+                        $result = mysqli_query($conn, $sql);
+                        if (mysqli_num_rows($result) > 0) {
+                        // output data of each row
+                        while($row = mysqli_fetch_assoc($result)) {?>
+                        <div class="col-lg-4">
                             <div class="featured-game-item mb-30">
                                 <div class="featured-game-thumb">
                                     <img src="<?php echo $row['image']?>" height='400' width='100' alt="">
@@ -205,26 +202,73 @@
                                 </div>
                             </div>
                         </div>
-                        <?php
-                                   }
-        } 
-?>
-                        
+                        <?php } } ?>
                     </div>
                 </div>
             </section>
             <!-- featured-game-area-end -->
-
+            <section class="features-area features-bg pt-50 pb-10 mt-0">
+                    <div class="container">
+                      <div class="fact-area pt-30">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="fact-item">
+                                    <div class="fact-icon">
+                                        <img src="img/icon/fact_icon01.png" alt="">
+                                    </div>
+                                    <div class="fact-content">
+                                        <h2><span class="odometer" data-count="245">00</span></h2>
+                                        <span>Amazing Feature</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="fact-item">
+                                    <div class="fact-icon">
+                                        <img src="img/icon/fact_icon02.png" alt="">
+                                    </div>
+                                    <div class="fact-content">
+                                        <h2><span class="odometer" data-count="1245">00</span></h2>
+                                        <span>Amazing Feature</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="fact-item">
+                                    <div class="fact-icon">
+                                        <img src="img/icon/fact_icon03.png" alt="">
+                                    </div>
+                                    <div class="fact-content">
+                                        <h2><span class="odometer" data-count="78">00</span>K</h2>
+                                        <span>Amazing Feature</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="fact-item">
+                                    <div class="fact-icon">
+                                        <img src="img/icon/fact_icon04.png" alt="">
+                                    </div>
+                                    <div class="fact-content">
+                                        <h2><span class="odometer" data-count="12">00</span></h2>
+                                        <span>Amazing Feature</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                </section>
             
 
             <!-- blog-area -->
-            <section class="blog-area pt-115 pb-120">
+            <section class="blog-area pt-50 pb-120">
                 <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-6 col-lg-8">
-                            <div class="section-title home-four-title black-title text-center mb-65">
-                                <h2>Latest News & <span>Articles</span></h2>
-                                <p>Compete with 100 players on a remote island for winner takes showdown known issue where certain skin strategic</p>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8">
+                            <div class="section-title title-style-three mb-50">
+                                <span>LATEST NEWS</span>
+                                    <h2>News & <span>Article</span></h2>
                             </div>
                         </div>
                     </div>
@@ -249,6 +293,7 @@
                         }
                     } else {
                         $category  =  $data->channel->category;
+                        $j=0;
                         for ($i=0; $i <3; $i++) { 
                         foreach($data->channel->item as $item)
                         {
@@ -294,13 +339,8 @@
         <!-- main-area-end -->
 
         <!-- footer-area -->
-<?php include('Linked-packages/footer.php');?>        
+        <?php include('Linked-packages/footer.php');?>        
         <!-- footer-area-end -->
-
-
-
-
-
 		<?php include('Linked-packages/jsScripts.php');?>
     </body>
 </html>
