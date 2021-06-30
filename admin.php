@@ -92,13 +92,28 @@ if($_SESSION['username'])
                                         <div class="col-md-6">
                                             <input type="file" name="Uploadfile" value="" required>
                                         </div>
-                                        <div class="col-md-6">
-                                            <input type="text" placeholder="Platform" name="platform" required>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="date" placeholder="Date" name="date" required>
-                                        </div>
+                                        <div class="row">
+                                        <label>Platform</label>
+                                            <div class="col-md-3">
+                                                <label>Desktop</label><input type="radio" name="platform" required>
+                                            </div>&nbsp;&nbsp;&nbsp;
 
+                                            <div class="col-md-3">
+                                                <label>Mobile</label><input type="radio"  name="platform" required>
+                                            </div>
+                                       
+                                            
+                                        </div>
+                                        <div class="col-md-6">
+                                                <select name="" id="">
+                                                <option value="">1</option>
+                                                <option value="">2</option>
+                                                <option value="">3</option>
+                                                </select>
+                                            </div>
+                                        <div class="col-md-6">
+                                                <input type="date" placeholder="Date" name="date" required>
+                                            </div>
                                     </div>  
                                     <input type="submit" name="submit" value="submit"/>
                                 </form>
@@ -123,6 +138,12 @@ if($_SESSION['username'])
                 $category=$_POST['game_subcategories'];
                 $platform=$_POST['platform'];
                 $date=$_POST['date'];
+                $date1= date('Y-m-d');
+
+                echo $date1;
+                echo $date;
+               
+                
                 $filename=$_FILES["Uploadfile"]["name"];
                 $tempname=$_FILES["Uploadfile"]["tmp_name"];
 
@@ -130,13 +151,21 @@ if($_SESSION['username'])
                 $query="SELECT * FROM latest_games WHERE `game_title` = '$name'";
                 $data= mysqli_query($conn, $query);
                 if (mysqli_num_rows($data) > 0) {
-                    echo "Error".$name;
+                    //echo "Error".$name;
                 }else{
 
 
 
                 $folder="lgimage/".$filename;
                 move_uploaded_file($tempname,$folder);
+                if($date==$date1 || $date< $date1){
+                    $status= "publish";
+                    echo $status.'----'.$date;
+
+                }
+                else{
+                    $status="upcoming";
+                }
                 
                 
                 if($name!="" && $category!="" && $filename!="")
@@ -144,7 +173,7 @@ if($_SESSION['username'])
                    
                     
                   
-                    $query="INSERT INTO latest_games VALUES('','$name','$description','$folder','$category','$platform','$date')";
+                    $query="INSERT INTO latest_games VALUES('','$name','$description','$folder','$category','$platform','$date','$status')";
                     $data= mysqli_query($conn, $query);
                     if($data){
                     

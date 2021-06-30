@@ -192,7 +192,7 @@
                                     <h4><a href="#"><?php echo $row["game_title"] ?> </a></h4>
                                     <div class="featured-game-meta">
                                         <i class="fas fa-bell"></i>
-                                        <span><?php echo $row["Platform"] ?> , <?php echo $row["categories"]?></span>
+                                        <span><?php echo $row["Platform"] ?>  <?php echo $row["categories"]?></span>
                                     </div>
                                 </div>
                                 <div class="featured-game-content featured-game-overlay-content">
@@ -200,7 +200,7 @@
                                     <h4><a href="#"><?php echo $row["game_title"] ?> </a></h4>
                                     <div class="featured-game-meta">
                                         <i class="fas fa-bell"></i>
-                                        <span><?php echo $row["Platform"] ?> , <?php echo $row["categories"]?></span>
+                                        <span><?php echo $row["Platform"] ?>  <?php echo $row["categories"]?></span>
                                     </div>
                                 </div>
                             </div>

@@ -73,7 +73,7 @@
                     <div class="row justify-content-center">
                         <div class="col-xl-6 col-lg-8">
                             <div class="section-title title-style-three white-title text-center mb-70">
-                                <h2>gaming Latest <span>matches</span></h2>
+                                <h2>Latest <span>GAMES</span></h2>
                                 <p>Compete with 100 players on a remote island for winner takes showdown
                                     known issue where certain skin strategic</p>
                             </div>
@@ -114,11 +114,10 @@ $rs_result= mysqli_query($conn, $sql);
                                     <img src="<?php echo $rows['image'];?>" width="200px" height="200px" alt="">
                                 </div>
                                 <div class="tournament-schedule-content">
-                                    <h3><a href="#">Forza <span>Horizon ii</span></a></h3>
-                                    <p>Find tecology people for digital projects in public There are many variations.</p>
+                                    <h3><a href="#"><?php echo $rows['game_title'];?></a></h3>
+                                    <p><?php echo $rows['description'];?></p>
                                     <div class="tournament-schedule-meta">
-                                        <h5>price : <span>$125,00</span></h5>
-                                        <a href="#">Joining</a>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -174,7 +173,7 @@ $rs_result= mysqli_query($conn, $sql);
                         <div class="col-lg-3 col-sm-6">
                             <div class="team-member-box text-center mb-50">
                                 <div class="team-member-thumb">
-                                    <img src="img/team/saqib.png" alt="">
+                                    <img src="img/team/team_member01.jpg" alt="">
                                     <div class="team-member-social">
                                         <ul>
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -185,8 +184,8 @@ $rs_result= mysqli_query($conn, $sql);
                                     </div>
                                 </div>
                                 <div class="team-member-content">
-                                    <h4><a href="#">Saqib Kazmi</a></h4>
-                                    <span>3D modeller</span>
+                                    <h4><a href="#">tomas aleman</a></h4>
+                                    <span>Marketing CEO</span>
                                 </div>
                             </div>
                         </div>

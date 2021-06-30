@@ -2423,8 +2423,8 @@ ul.minicart .cart-price .new {
     padding-right: 60px;
 }
 .new-released-game-area .no-gutters [class*="col-"] {
-	padding-left: 0;
-	padding-right: 0;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 .new-released-game-area {
     background: #f7f7f7;
