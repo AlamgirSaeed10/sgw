@@ -26,16 +26,14 @@
                             <div class="main-menu menu-style-two">
                                 <nav>
                                     <div class="logo">
-                                        <a href="index-4.html"><img src="img/logo/logo_two.png" alt="Logo"></a>
+                                        <a href="index.php"><img src="img/logo/logo_two.png" alt="Logo"></a>
                                     </div>
                                     <div id="mobile-menu" class="navbar-wrap d-none d-lg-flex">
                                         <ul>
                                             <li class="show"><a href="index.php">Home</a>
-                                            
-                                                
                                             </li>
-                                            <li><a href="about-us.html">About Story</a></li>
-                                                    <li><a href="upcoming-games.html">Upcoming Games</a></li>
+                                            <li><a href="about-us.php">About Story</a></li>
+                                                    <li><a href="upcoming-games.php">Upcoming Games</a></li>
                                             
                                             </li>
                                             
@@ -43,7 +41,7 @@
                                             <li><a href="blog.php">Blog</a>
                                                 
                                             </li>
-                                            <li><a href="contact.html">contact</a></li>
+                                            <li><a href="contact.php">contact</a></li>
                                         </ul>
                                     </div>
                                     <div class="header-action">

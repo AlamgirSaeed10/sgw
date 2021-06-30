@@ -1,3 +1,14 @@
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<style>
+#lion-roar-div{
+    transition: all .2s ease-in-out;
+}
+#lion-roar-div:hover{
+    transform: scale(1.2);
+}
+
+</style>
 <footer>
             <div class="footer-top footer-bg s-footer-bg">
                 <!-- newsletter-area -->
@@ -29,35 +40,18 @@
                         <div class="col-xl-3 col-lg-4 col-md-6">
                             <div class="footer-widget mb-50">
                                 <div class="footer-logo mb-35">
-                                    <a href="index.html"><img src="img/logo/logo.png" alt=""></a>
-                                </div>
-                                <div class="footer-text">
-                                    <p>Gemas marketplace the relase etras thats sheets continig passag.</p>
-                                    <div class="footer-contact">
-                                        <ul>
-                                            <li><i class="fas fa-map-marker-alt"></i> <span>Address : </span>PO Box W75 Street
-                                                lan West new queens</li>
-                                            <li><i class="fas fa-headphones"></i> <span>Phone : </span>+24 1245 654 235</li>
-                                            <li><i class="fas fa-envelope-open"></i><span>Email : </span>info@exemple.com</li>
-                                        </ul>
+                                <div id="lion-roar-div">
+                                <!-- <a href="index.php"> -->
+                                <img src="img/logo/SHAH-GAME-WORLD.png" 
+                                    alt="Shah game world logo" title="Shah game world logo" id="imagezoom" height="315px">
+                                    <!-- </a> -->
+                                    <audio id="beep" preload="auto">
+                                    <source src="img/audio/lionroar.mp3"></source>
+                                    </audio>
                                     </div>
+                                    
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-3 col-sm-6">
-                            <div class="footer-widget mb-50">
-                                <div class="fw-title mb-35">
-                                    <h5>Products</h5>
-                                </div>
-                                <div class="fw-link">
-                                    <ul>
-                                        <li><a href="#">Graphics (26)</a></li>
-                                        <li><a href="#">Backgrounds (11)</a></li>
-                                        <li><a href="#">Fonts (9)</a></li>
-                                        <li><a href="#">Music (3)</a></li>
-                                        <li><a href="#">Photography (3)</a></li>
-                                    </ul>
-                                </div>
+                               
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-3 col-sm-6">
@@ -69,58 +63,55 @@
                                     <ul>
                                         <li><a href="#">Terms & Conditions</a></li>
                                         <li><a href="#">Privacy Policy</a></li>
-                                        <li><a href="#">Refund Policy</a></li>
-                                        <li><a href="#">Affiliate</a></li>
-                                        <li><a href="#">FAQUse Cases</a></li>
+                                        <li><a href="about-us.php">About Us</a></li>
+                                        <li><a href="career.php">Looking for Job?</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-4 col-md-6">
-                            <div class="footer-widget mb-50">
+                            <div class="footer-widget mb-20">
                                 <div class="fw-title mb-35">
                                     <h5>Follow us</h5>
                                 </div>
                                 <div class="footer-social">
                                     <ul>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.facebook.com/Shah-Game-World-105430321793389"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.instagram.com/shahgameworld786/"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/shah-game-world"><i class="fab fa-linkedin-in"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="footer-widget mb-50">
-                                <div class="fw-title mb-35">
-                                    <h5>Newsletter Sign Up</h5>
+                            <div class="footer-text">
+                                    <div class="footer-contact">
+                                        <ul>
+                                            <li><i class="fas fa-map-marker-alt"></i> <span>Address : </span>Ch Heights First floor Citi Housing Scheme Jhelum 49600</li>
+                                            <li><i class="fas fa-headphones"></i> <span>Phone : </span>+92 544 225099</li>
+                                            <li><i class="fas fa-envelope"></i><span>Email : </span>info@shahgameworld.com</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="footer-newsletter">
-                                    <form action="#">
-                                        <input type="text" placeholder="Enter your email">
-                                        <button><i class="fas fa-rocket"></i></button>
-                                    </form>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="footer-fire"><img src="img/images/footer_fire.png" alt=""></div>
-                <div class="footer-fire footer-fire-right"><img src="img/images/footer_fire.png" alt=""></div>
             </div>
             <div class="copyright-wrap s-copyright-wrap">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-6">
                             <div class="copyright-text">
-                                <p>Copyright © 2020 <a href="#">Geco</a> All Rights Reserved.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 d-none d-md-block">
-                            <div class="payment-method-img text-right">
-                                <img src="img/images/card_img.png" alt="img">
+                                <p>Copyright © <?php echo date("Y"); ?> <a href="https://shahgameworld.com">Shah Game World</a> All Rights Reserved.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
+        <script>
+		
+		var beepOne = $("#beep")[0];
+		$("#lion-roar-div")
+	.click(function() {
+		beepOne.play();
+	});	
+	</script>
