@@ -15,6 +15,7 @@
         <!-- header-area -->
         <header>
         <?php include('Linked-packages/header.php')?>
+        
         </header><!-- header-area-end -->
 
         <!-- main-area -->
@@ -81,33 +82,23 @@
                     </div>
                     <div class="row">
                     <?php 
+                        $num_per_page=04;
+                        if(isset($_GET["page"]))
+                        {
+                            $page=$_GET["page"];
+                        }
+                        else
+                        {
+                            $page=1;
+                        }
 
+                        $start_from=($page-1)*04;
 
-
-$num_per_page=04;
-
-
-if(isset($_GET["page"]))
-{
-    $page=$_GET["page"];
-}
-else
-{
-    $page=1;
-}
-
-$start_from=($page-1)*04;
-
-$sql="select * from latest_games limit $start_from,$num_per_page";
-$rs_result= mysqli_query($conn, $sql);
-
-
-?>                       
-                          <?php 
-        
-        while($rows=mysqli_fetch_array($rs_result))
-        {
-        ?>
+                        $sql="select * from latest_games limit $start_from,$num_per_page";
+                        $rs_result= mysqli_query($conn, $sql);
+                            while($rows=mysqli_fetch_array($rs_result))
+                            {
+                            ?>
                         <div class="col-lg-6">
                             <div class="latest-match-box mb-30" id="load">
                                 <div class="latest-match-thumb">
@@ -124,37 +115,36 @@ $rs_result= mysqli_query($conn, $sql);
                             </div>
                         </div>
                         <?php     
-        }
-                
-        ?> 
+                            }
+                            ?> 
                        
                     </div>
                 </div>
                 <?php 
     
     
-    $sql="select * from latest_games";
-    $rs_result=mysqli_query($conn ,$sql);
-    $total_records=mysqli_num_rows($rs_result);
-    $total_pages=ceil($total_records/$num_per_page);
-    echo "<div class='my-class'>";
-    if($page>1)
-                {
-                   
-                    echo "<a href='about-us.php?page=".($page-1)."' class='btn btn-danger'>Previous</a>";
-                }
-    
-    for($i=1;$i<=$total_pages;$i++)
-    {
-        echo "<a href='about-us.php?page=".$i."'class='btn btn-danger'>".$i."</a>" ;
-    }
-    
-    if($i>$page)
-    {
-        echo "<a href='about-us.php?page=".($page+1)."' class='btn btn-danger'>Next</a>";
-        echo "</div>";
-    }
-    ?>
+                        $sql="select * from latest_games";
+                        $rs_result=mysqli_query($conn ,$sql);
+                        $total_records=mysqli_num_rows($rs_result);
+                        $total_pages=ceil($total_records/$num_per_page);
+                        echo "<div class='my-class'>";
+                        if($page>1)
+                                    {
+                                    
+                                        echo "<a href='about-us.php?page=".($page-1)."' class='btn btn-danger'>Previous</a>";
+                                    }
+                        
+                        for($i=1;$i<=$total_pages;$i++)
+                        {
+                            echo "<a href='about-us.php?page=".$i."'class='btn btn-danger'>".$i."</a>" ;
+                        }
+                        
+                        if($i>$page)
+                        {
+                            echo "<a href='about-us.php?page=".($page+1)."' class='btn btn-danger'>Next</a>";
+                            echo "</div>";
+                        }
+                        ?>
             </section>
             <!-- latest-match-area-end -->
 
