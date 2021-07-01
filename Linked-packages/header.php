@@ -63,7 +63,7 @@
                                 <nav>
                                     
                                     <div class="logo">
-                                        <a href="index.php"><img src="img/logo/logo_two.png" alt="Logo"></a>
+                                        <a href="index.php"><img src="img/logo/SHAH-GAME-WORLD.png" width ="250px" height ="auto" alt="Logo"></a>
                                     </div>
                                     <div id="mobile-menu" class="navbar-wrap d-none d-lg-flex">
                                         <ul>
