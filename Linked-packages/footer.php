@@ -69,7 +69,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="col-xl-5 col-lg-6 col-md-7">
                             <div class="footer-widget mb-20">
                                 <div class="fw-title mb-35">
                                     <h5>Follow us</h5>
