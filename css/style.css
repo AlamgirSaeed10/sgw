@@ -554,7 +554,7 @@ ul.minicart .cart-content a:hover,
 	content: "";
 	position: absolute;
 	height: 3px;
-	background: #e4a101;
+	background: #1c1121;
 	right: 40px;
 	left: 0;
 	bottom: 0;
@@ -1137,7 +1137,7 @@ ul.minicart .cart-price .new {
 .shop-area.black-bg .product-cart-action a:hover,
 .latest-match-box .tournament-schedule-meta a:hover,
 .features-item .features-list-content .product-tag a:hover::before {
-	background: #e4a101;
+	background: #1c1121;
 }
 
 /* 4. Breadcrumb */

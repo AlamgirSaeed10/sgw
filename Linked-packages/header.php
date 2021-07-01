@@ -67,18 +67,18 @@
                                     </div>
                                     <div id="mobile-menu" class="navbar-wrap d-none d-lg-flex">
                                         <ul>
-                                             <li class="show" ><a href="index.php">Home</a>
+                                             <li class="<?= (basename($_SERVER['PHP_SELF']) == "index.php" )? "active" : ""; ?>" ><a href="index.php">Home</a>
                                             </li>
-                                            <li><a href="about-us.php">About Story</a></li>
-                                                    <li><a href="upcoming-games.php">Upcoming Games</a></li>
+                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "about-us.php" )? "active" : ""; ?>"><a href="about-us.php">About Story</a></li>
+                                                    <li class= "<?= (basename($_SERVER['PHP_SELF']) == "upcoming-games.php" )? "active" : ""; ?>"><a href="upcoming-games.php">Upcoming Games</a></li>
                                             
                                             </li>
                                             
                                             
-                                            <li><a href="blog.php">Blog</a>
+                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "blog.php" )? "active" : ""; ?>"><a href="blog.php">Blog</a>
                                                 
                                             </li>
-                                            <li><a href="contact.php">contact</a></li>
+                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "contact.php" )? "active" : ""; ?>"><a href="contact.php">contact</a></li>
                                         </ul>
                                     </div>
                                     <div class="header-action">
