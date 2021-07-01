@@ -59,13 +59,15 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="main-menu menu-style-two">
+                                
                                 <nav>
+                                    
                                     <div class="logo">
                                         <a href="index.php"><img src="img/logo/logo_two.png" alt="Logo"></a>
                                     </div>
                                     <div id="mobile-menu" class="navbar-wrap d-none d-lg-flex">
                                         <ul>
-                                            <li class="show"><a href="index.php">Home</a>
+                                             <li class="show" ><a href="index.php">Home</a>
                                             </li>
                                             <li><a href="about-us.php">About Story</a></li>
                                                     <li><a href="upcoming-games.php">Upcoming Games</a></li>

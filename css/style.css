@@ -520,6 +520,7 @@ ul.minicart .cart-content a:hover,
 }
 .navbar-wrap ul li {
 	position: relative;
+	margin-right: 10px;
 }
 .navbar-wrap ul li a {
 	font-size: 14px;
