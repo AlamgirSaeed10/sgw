@@ -53,11 +53,21 @@
                 $email = $_POST['email'];
                 $name = $_POST['name'];
                 $message=  $_POST['message'];
+                 
+
 
                         $sql = "INSERT INTO `contact_us`(`message`,`name`,`email`) 
                         VALUES ('$message','$name','$email')";
                         if (mysqli_query($conn, $sql)) {
                             $success =  "Thank You! We will contact you shortly!";
+                            $to = "qundeelsaleem6@gmail.com";
+                            $body= "";
+                            $body .= "From:" . $name. "\r\n";
+                            $body .= "Email:" . $email. "\r\n";
+                            $body .= "Massage:" . $message. "\r\n";
+
+                            mail($to, " Subject",  $body);
+
                         }
                         else {
                         $error = "unexpected error occured! Please contact administrator or send us

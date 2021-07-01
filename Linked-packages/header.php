@@ -35,23 +35,50 @@
                     </div>
                 </div>
             </div>
-            
+            <!-- <div class="header-top-area s-header-top-area d-none d-lg-block">
+                <div class="container custom-container-two">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 d-none d-lg-block">
+                            
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="header-social">
+                                <span>Follow us on :</span>
+                                <ul>
+                                    <li><a href="https://www.facebook.com/Shah-Game-World-105430321793389"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://www.instagram.com/shahgameworld786/"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/shah-game-world"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
             <div id="sticky-header" class="header-four-wrap">
                 <div class="container custom-container-two">
                     <div class="row">
                         <div class="col-12">
                             <div class="main-menu menu-style-two">
+                                
                                 <nav>
+                                    
                                     <div class="logo">
-                                        <a href="index.php"><img src="img/logo/logo_two.png" alt="Logo"></a>
+                                        <a href="index.php"><img src="img/logo/SHAH-GAME-WORLD.png" width ="250px" height ="auto" alt="Logo"></a>
                                     </div>
                                     <div id="mobile-menu" class="navbar-wrap d-none d-lg-flex">
                                         <ul>
-                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "index.php" )? "active" : ""; ?>"><a href="index.php">Home</a></li>
-                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "about-us.php" )? "active" : ""; ?>"><a href="about-us.php">About Story</a></li>
-                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "upcoming-games.php" )? "active" : ""; ?>"><a href="upcoming-games.php">Upcoming Games</a></li>
-                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "blog.php" )? "active" : ""; ?>"><a href="blog.php">Blog</a></li>
-                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "contact.php" )? "active" : ""; ?>"><a href="contact.php">contact</a></li>
+                                             <li class="show" ><a href="index.php">Home</a>
+                                            </li>
+                                            <li><a href="about-us.php">About Story</a></li>
+                                                    <li><a href="upcoming-games.php">Upcoming Games</a></li>
+                                            
+                                            </li>
+                                            
+                                            
+                                            <li><a href="blog.php">Blog</a>
+                                                
+                                            </li>
+                                            <li><a href="contact.php">contact</a></li>
                                         </ul>
                                     </div>
                                     <div class="header-action">
