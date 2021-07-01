@@ -1006,9 +1006,9 @@ ul.minicart .cart-price .new {
     line-height: 30px;
     box-shadow: 0px 3px 5.58px 0.42px rgba(33, 34, 47, 0.27);
     font-size: 12px;
-    color: #e9a401;
-    border: 1px solid rgb(40, 40, 46);
-    background: rgb(51, 52, 66);
+    color: #252634;
+    border: 1px solid #e9a401;
+    background: #e9a401;
 }
 .header-style-four .menu-style-two {
     padding: 0;
@@ -1019,8 +1019,8 @@ ul.minicart .cart-price .new {
     position: relative;
 }
 .header-four-wrap {
-    background: #252634;
-    border-top: 1px solid #1e1e2a;
+    background: #e9a401;
+    border-top: 1px solid #e9a401;
 	padding: 18px 0;
 	position: relative;
 }
@@ -1035,21 +1035,21 @@ ul.minicart .cart-price .new {
     width: 52px;
     height: 46px;
     line-height: 46px;
-    background: #252634;
+    background: #e9a401;
     box-shadow: 0px 3px 7px 0px rgb(0 0 0 / 20%), inset 0px 3px 7px 0px rgb(0 0 0 / 40%);
 }
 .header-four-wrap .header-shop-cart ul.minicart {
-    background: #252634;
+    background: #e9a401;
     top: 53px;
 }
 .header-four-wrap .header-shop-cart .minicart .checkout-link a.red-color {
-    background: #333442;
+    background: #e9a401;
 }
 .header-four-wrap::before {
     content: "";
     position: absolute;
     width: 29%;
-    background: #e9a401;
+    background: #252634;
     height: 100%;
     top: 0;
     clip-path: polygon(0px 0px, 91% 0px, 100% 100%, 0% 100%);
