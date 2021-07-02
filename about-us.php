@@ -163,7 +163,7 @@
                         <div class="col-lg-3 col-sm-6">
                             <div class="team-member-box text-center mb-50">
                                 <div class="team-member-thumb">
-                                    <img src="img/team/team_member01.jpg" alt="">
+                                    <img src="https://media.discordapp.net/attachments/809013301202649139/858348270657208330/Screenshot.png?width=615&height=676" alt="">
                                     <div class="team-member-social">
                                         <ul>
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -182,7 +182,7 @@
                         <div class="col-lg-3 col-sm-6">
                             <div class="team-member-box text-center mb-50">
                                 <div class="team-member-thumb">
-                                    <img src="img/team/team_member02.jpg" alt="">
+                                    <img src="https://cdn.discordapp.com/attachments/786561685514485772/860494473389408266/20210303_102037.jpg" alt="">
                                     <div class="team-member-social">
                                         <ul>
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
