@@ -60,7 +60,7 @@
                         VALUES ('$message','$name','$email')";
                         if (mysqli_query($conn, $sql)) {
                             $success =  "Thank You! We will contact you shortly!";
-                            $to = "qundeelsaleem6@gmail.com";
+                            $to = "info@shahgameworld.com";
                             $body= "";
                             $body .= "From:" . $name. "\r\n";
                             $body .= "Email:" . $email. "\r\n";
