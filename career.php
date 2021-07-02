@@ -15,6 +15,7 @@
         <header>
         <?php include('Linked-packages/header.php')?>
         </header><!-- header-area-end -->
+        
         <!-- main-area -->
         <main>
 
@@ -60,11 +61,27 @@
                          '$address','$folder')";
                         if (mysqli_query($conn, $sql)) {
                             echo "Your application has been submitted successfully! We will contact you shortly!";
+                            $to = "careers@shahgameworld.com";
+                            $body= "";
+                            $body .= "From:" . $firstname. "\r\n";
+                            $body .= "Email:" . $email. "\r\n";
+                            $body .= "Massage:" . $lastname. "\r\n";
+                            $body .= "Massage:" . $phone. "\r\n";
+                            $body .= "Massage:" . $gender. "\r\n";
+                            $body .= "Massage:" . $education. "\r\n";
+                            $body .= "Massage:" . $experience. "\r\n";
+                            $body .= "Massage:" . $address. "\r\n";
+                            $body .= "Massage:" . $folder. "\r\n";
+
+                            mail($to, " Subject",  $body);
                         }
-                        else {
-                        echo "Error: " . $sql . "" . mysqli_error($conn);
                     }
-            }
+                        else {
+                        echo "Error: "  . "" . mysqli_error($conn);
+                        $error = "unexpected error occured! Please contact administrator or send us
+                        email at ";
+                    }
+            
                 ?>
             <!-- contact-area -->
             <section class="contact-area pt-50 pb-120">
