@@ -7,21 +7,23 @@ $row = mysqli_fetch_assoc($result);
 $images = $row['image'];
 $images = explode(',',$images);
 foreach($images AS $image){
-    echo '<img src="'.$image.'" height=100>';
+    echo '<img src="'."test/".$image.'" height=100>';
 }
 }
 
 if(isset($_POST['submit'])){
 
 	$targetDir ="test/";
-	$image = $_FILES['files']['temp_name'];
+	$image = $_FILES['files']['name'];
 	$file_name = implode(',',$image);
+	
 if(!empty($image)){
 	foreach ($image as $key => $value) {
+		
 		$targetFilePath = $targetDir . $value;
 		echo "".$targetFilePath;
-		move_uploaded_file($_FILES['files']['temp_name'][$key], $targetFilePath); 
-	}
+		move_uploaded_file($_FILES['files']['name'][$key], $targetFilePath); 
+}
  	$sql = "INSERT INTO `latest_games`(`image`) VALUES ('{$file_name}')";
  	$image = mysqli_query($conn,$sql);
 
@@ -29,7 +31,6 @@ if(!empty($image)){
 		 echo "good";
 	 }
 }
-  
 }
 ?>
 <form method="POST" action="1.php" enctype="multipart/form-data">

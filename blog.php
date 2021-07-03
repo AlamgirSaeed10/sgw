@@ -23,7 +23,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="breadcrumb-content text-center">
-                                <h2>News<span>Blog</span></h2>
+                                <h2>News<span> Blog</span></h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
@@ -72,7 +72,7 @@
                         <div class="col-lg-8">
                             <div class="blog-list-post">
                                 <div class="blog-list-post-thumb">
-                                    <a href="blog-details.html"><img src="img/blog/t_blog_thumb01.jpg" alt=""></a>
+                                    <!-- <a href="blog-details.html"><img src="img/blog/t_blog_thumb01.jpg" alt=""></a> -->
                                 </div>
                                 <div class="blog-list-post-content">
                                     <div class="blog-list-post-tag mb-25">
@@ -88,13 +88,14 @@
                                 </div>
                                 <div class="blog-list-post-bottom">
                                     <ul>
-                                        <li><a href="<?php echo $link;?>">more reding<i class="fas fa-angle-double-right"></i></a></li>
+                                        <li><a href="<?php echo $link;?>">Read more<i class="fas fa-angle-double-right"></i></a></li>
                                         <li>
                                             <span>SHARE :</span>
                                             <div class="blog-post-share">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                                <a href="https://www.instagram.com/shahgameworlds/"><i class="fab fa-instagram"></i></a>
+                                                <a href="https://www.facebook.com/Shah-Game-World-105430321793389"><i class="fab fa-facebook-f"></i></a>
+                                                <a href="https://twitter.com/shahgameworld"><i class="fab fa-twitter"></i></a>
+                                                <a href="https://www.linkedin.com/company/shah-game-world"><i class="fab fa-linkedin"></i></a>
+                                                <a href="https://www.instagram.com/shah_game_world/"><i class="fab fa-instagram"></i></a>
                                             </div>
                                         </li>
                                     </ul>
@@ -109,5 +110,9 @@
             <!-- blog-area-end -->
         </main>
         <!-- main-area-end -->
+         <!-- footer-area -->
+         <?php include('Linked-packages/footer.php');?>        
+        <!-- footer-area-end -->
+		<?php include('Linked-packages/jsScripts.php');?>
     </body>
 </html>

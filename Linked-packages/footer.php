@@ -77,8 +77,9 @@
                                 <div class="footer-social">
                                     <ul>
                                     <li><a href="https://www.facebook.com/Shah-Game-World-105430321793389"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="https://www.instagram.com/shahgameworld786/"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/company/shah-game-world"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="https://twitter.com/shahgameworld"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/company/shah-game-world"><i class="fab fa-linkedin"></i></a></li>
+                                        <li><a href="https://www.instagram.com/shah_game_world/"><i class="fab fa-instagram"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
