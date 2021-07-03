@@ -155,11 +155,11 @@ if($_SESSION['username'])
                 
                 foreach ($game_images as $key => $value) {
                     $targetFilePath = $targetDir.$value;
-                    move_uploaded_file($_FILES["images"]["name"][$key], $targetFilePath);                                 
+                    move_uploaded_file($_FILES["images"]["tmp_name"][$key], $targetFilePath);                                 
                 }
                 foreach ($screenshot_image as $key => $value) {
                     $targetFilePath = $targetDir.$value;
-                    move_uploaded_file($_FILES["files"]["name"][$key], $targetFilePath);                                 
+                    move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath);                                 
                     
                 }
                 if($date==$date1 || $date< $date1){
