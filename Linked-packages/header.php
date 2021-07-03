@@ -1,5 +1,4 @@
-
-            <header class="header-style-four">
+<header class="header-style-four">
             <div class="header-top-area d-none d-lg-block">
                 <div class="container-fluid container-full-padding">
                     <div class="row align-items-center">
@@ -45,12 +44,27 @@
                                         <!-- <a href="index.php"><img src="img/logo/SHAH-GAME-WORLD.png" width ="250px" height ="auto" alt="Logo"></a> -->
                                     </div>
                                     <div id="mobile-menu" class="navbar-wrap d-none d-lg-flex">
-                                        <ul>
-                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "index.php" )? "active" : ""; ?>"><a href="index.php">Home</a></li>
-                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "about-us.php" )? "active" : ""; ?>"><a href="about-us.php">About Story</a></li>
-                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "upcoming-games.php" )? "active" : ""; ?>"><a href="upcoming-games.php">Upcoming Games</a></li>
-                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "blog.php" )? "active" : ""; ?>"><a href="blog.php">Blog</a></li>
-                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "contact.php" )? "active" : ""; ?>"><a href="contact.php">contact</a></li>
+                                         <ul>
+                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "index.php" )? "show" : ""; ?>">
+                                                <a  href="index.php" class=" <?= (basename($_SERVER['PHP_SELF']) == "index.php" )? "active" : ""; ?>">Home</a>
+                                            </li>
+
+                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "about-us.php" )? "show" : ""; ?>">
+                                                <a href="about-us.php" class=" <?= (basename($_SERVER['PHP_SELF']) == "about-us.php" )? "active" : ""; ?>">About Story</a>
+                                            </li>
+
+                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "upcoming-games.php" )? "show" : ""; ?>">
+                                                <a href="upcoming-games.php" class=" <?= (basename($_SERVER['PHP_SELF']) == "upcoming-games.php" )? "active" : ""; ?>">Upcoming Games</a>
+                                            </li>
+
+                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "blog.php" )? "show" : ""; ?>">
+                                            <a  href="blog.php" class=" <?= (basename($_SERVER['PHP_SELF']) == "blog.php" )? "active" : ""; ?>">Blog</a>
+                                            </li>
+
+                                            <li class="<?= (basename($_SERVER['PHP_SELF']) == "contact.php" )? "show" : ""; ?>">
+                                                <a href="contact.php" class=" <?= (basename($_SERVER['PHP_SELF']) == "contact.php" )? "active" : ""; ?>">contact</a>
+                                            </li>
+
                                         </ul>
                                      </div>
                                     <div class="header-action">

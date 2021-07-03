@@ -3,19 +3,17 @@
     <head>
         <?php include('Linked-packages/headerLinks.php');?>
         <?php include_once('Database/connection.php');?>
-
     </head>
     <body>
-       
-
-        <!-- preloader -->
+       <!-- preloader -->
        <?php include('Linked-packages/preloader.php')?>
-        <!-- preloader-end -->
+       <!-- preloader-end -->
 
         <!-- header-area -->
         <header>
         <?php include('Linked-packages/header.php')?>
-        </header><!-- header-area-end -->
+        </header>
+        <!-- header-area-end -->
 
         <!-- main-area -->
         <main>
@@ -79,9 +77,6 @@
                 </div>
             </section>
             <!-- slider-area-end -->
-
-             
-
             <!-- home-four-area-bg -->
             <div class="home-four-area-bg">
                 <div class="bg"></div>
@@ -137,12 +132,14 @@
                             <div class="col-lg-6">
                                 <div class="section-title title-style-two mb-45">
                                     <span>about story</span>
-                                    <h2>Shah <span>Game</span> World</h2>
+                                    <h2>Welcome to <span>Shah Game</span> World</h2>
                                 </div>
                                 <div class="about-content">
-                                    <p>Find technology or people for digital projects in public sector and Find an individual specialist develo researcher.</p>
-                                    <p>Consectur adipiscing elit, sed do eiusmod tempor incididunt labore dolore mana aliqua. Unimd minim venam quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip commodo cpsam.</p>
+                                        <p>We are excited to see you on our profile. SHAH GAME WORLD is a leading mobile app,
+                                         games and enterprise software development company! – expert in development, 
+                                         customization, and integration of complex enterprise-level solutions, 
+                                         business intelligence analytics, advanced mobile game solutions, over 1+ years of experience. 
+                                         Our team is constantly improving and mastering industry progression.</p>
                                     <div class="about-btn">
                                         <a href="about-us.php" class="btn">READ MORE</a>
                                     </div>
@@ -155,9 +152,10 @@
 
             </div>
             <!-- home-four-area-bg-end -->
-
+        <!-- <div class="home-four-area-bg">
+                <div class="bg"></div> -->
             <!-- featured-game-area -->
-            <section class="featured-game-area new-released-game-area pt-20 pb-90">
+             <section class="featured-game-area new-released-game-area pt-20 pb-90">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-8">
@@ -259,7 +257,7 @@
                     </div>
                  </div>
                 </section>
-            
+        <!-- </div> -->
 
             <!-- blog-area -->
             <section class="blog-area pt-50 pb-120">

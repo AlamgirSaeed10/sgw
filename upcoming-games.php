@@ -27,7 +27,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="breadcrumb-content text-center">
-                                <h2>Upcoming <span>Games</span></h2>
+                                <!-- <h2>Upcoming <span>Games</span></h2> -->
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
@@ -47,10 +47,8 @@
                 <div class="container">
                     <div class="row">
                     <?php 
-        $sql = "SELECT * FROM `latest_games`where Status='upcoming'";
+        $sql = "SELECT * FROM `latest_games`where game_status='upcoming' AND id=49";
         $result = mysqli_query($conn, $sql);
-        
-
         if (mysqli_num_rows($result) > 0) {
           // output data of each row
           while($row = mysqli_fetch_assoc($result)) {
@@ -64,22 +62,40 @@
                                         <h4><a href="#"><?php echo $row['game_title']?></a></h4>
                                     </div>
                                     <div class="uc-game-price">
-                                        <h5><?php echo $row['Status'];?></h5>
+                                        <h5><?php echo $row['game_status'];?></h5>
                                     </div>
                                 </div>
                                 <p><?php echo $row['description']?></p>
                                 <div class="upcoming-game-thumb">
+                                    <?php if($row['image'] == null){?>
                                     <img src="<?php echo $row['image']?>" height='200' width='100' alt="">
+                                    <?php
+                                    }else{?>
+                                    <img src="https://jpassport.asia/static/image-not-available.png" height='200' width='100' alt="">
+                                    <?php
+                                    }
+                                    ?>
                                     <div class="upcoming-game-cart">
-                                    <a href="game-single.php?game_id=<?php echo $row['id']; ?>"  class="btn transparent-btn"><i class="fas fa-shopping-basket"></i>BUY Now</a>
+                                    <a href="game-single.php?game_id=<?php echo $row['id']; ?>" class="btn transparent-btn">Read more <i class="fas fa-angle-double-right"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <?php
-                                   }
-        } 
-?>
+                        }
+                        }else {?>
+                         <div class="col-lg-12 col-md-12">
+                            <div class="upcoming-game-item mb-40">
+                                <div class="upcoming-game-head justify-content-center">
+                                    <div class="uc-game-head-title justify-content-center">
+                                        <img src="https://i7.uihere.com/icons/319/868/837/no-data-7b96ec17bb861a24849a99f1a6bc7a4c.png" title="no data found" alt="no data found">
+                                        <span style="font-size: 25px;">No Data found!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <?php } ?>
                         
                     </div>
                 </div>

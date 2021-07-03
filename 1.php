@@ -7,7 +7,7 @@ $row = mysqli_fetch_assoc($result);
 $images = $row['image'];
 $images = explode(',',$images);
 foreach($images AS $image){
-    echo '<img src="'."test/".$image.'" height=100>';
+    echo '<img src="'.$image.'" height=100>';
 }
 }
 

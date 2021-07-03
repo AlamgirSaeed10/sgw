@@ -974,7 +974,8 @@ ul.minicart .cart-price .new {
     background-image: url(../img/bg/h3_header_bg.jpg);
 }
 .header-style-four .header-top-area {
-    background-image: url(../img/bg/fourth_header_top_bg.jpg);
+    /* background-image: url(../img/bg/fourth_header_top_bg.jpg); */
+	background-color: #343d52;
     background-position: center;
     background-size: cover;
     padding: 22px 0;
@@ -1015,8 +1016,8 @@ ul.minicart .cart-price .new {
     position: relative;
 }
 .header-four-wrap {
-    background: #252634;
-    border-top: 1px solid #1e1e2a;
+    background: #0e4d92;
+    border-top: 1px solid #0e4d92;
 	padding: 18px 0;
 	position: relative;
 }
@@ -1138,14 +1139,14 @@ ul.minicart .cart-price .new {
 
 /* 4. Breadcrumb */
 .breadcrumb-bg {
-	background-image: url(../img/bg/breadcrumb_bg.jpg);
+	background-image: url('');
 	padding-top: 275px;
 	padding-bottom: 170px;
 	background-position: center;
 	background-size: cover;
 }
 .s-breadcrumb-bg {
-	background-image: url(../img/bg/breadcrumb_bg02.jpg);
+	background-image: url(../img/banners/upcoming-banner.jpg);
 }
 .third-breadcrumb-bg {
 	background-image: url(../img/bg/breadcrumb_bg03.jpg);
