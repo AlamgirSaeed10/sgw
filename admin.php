@@ -71,6 +71,10 @@ if($_SESSION['username'])
                                         <div class="col-md-6">
                                            <input type="text" placeholder="Description" name="description" required>
                                        </div>
+                                       <div class="col-md-6">
+                                           <label>Game Images</label>
+                                        <input type="file" name="images[]" multiple accept="image/*">
+                                        </div>
                                         
                                         
                                         <div class="col-md-6">
@@ -90,6 +94,7 @@ if($_SESSION['username'])
                                         </div>
                                        
                                         <div class="col-md-6">
+                                        <label>Game Screenshots</label>
                                         <input type="file" name="files[]" multiple accept="image/*">
                                         </div>
                                         
@@ -119,17 +124,17 @@ if($_SESSION['username'])
 
             <?php
             
-            if(isset($_POST['view'])){
-                $id = $_POST['id'];
-            $query = "SELECT `image` FROM `latest_games` WHERE id='$id'";
-            $result = mysqli_query($conn,$query);
-            $row = mysqli_fetch_assoc($result);
-            $images = $row['image'];
-            $images = explode(',',$images);
-            foreach($images AS $image){
-                echo '<img src="'.$image.'" height=100>';
-            }
-            }
+            // if(isset($_POST['view'])){
+            //     $id = $_POST['id'];
+            // $query = "SELECT `image` FROM `latest_games` WHERE id='$id'";
+            // $result = mysqli_query($conn,$query);
+            // $row = mysqli_fetch_assoc($result);
+            // $images = $row['image'];
+            // $images = explode(',',$images);
+            // foreach($images AS $image){
+            //     echo '<img src="'.$image.'" height=100>';
+            // }
+            // }
              if(isset($_POST['submit']))
              {
                 
@@ -139,25 +144,35 @@ if($_SESSION['username'])
                  $platform=$_POST['platform'];
                  $date=$_POST['date'];
                  $date1= date('Y-m-d');
-
+                 
                  $targetDir ="lgimage/";
-                 $image = $_FILES["files"]["name"];
-                 $file_name = implode(',',$image);
+
+                 $game_images=$_FILES['images']["name"];
+                 $game_file_name = implode(',',$game_images);
+                 
+                 $screenshot_image = $_FILES["files"]["name"];
+                 $scfreenshot_file_name = implode(',',$screenshot_image);
                 
-                foreach ($image as $key => $value) {
+                foreach ($game_images as $key => $value) {
+                    $targetFilePath = $targetDir.$value;
+                    move_uploaded_file($_FILES["images"]["name"][$key], $targetFilePath);                                 
+                }
+                foreach ($screenshot_image as $key => $value) {
                     $targetFilePath = $targetDir.$value;
                     move_uploaded_file($_FILES["files"]["name"][$key], $targetFilePath);                                 
                     
-                }if($date==$date1 || $date< $date1){
+                }
+                if($date==$date1 || $date< $date1){
                     $status= "publish";
-                    echo $status.'----'.$date;
                 }else{
                     $status="upcoming";
                 }
                 
-                $newPath = $targetDir.$file_name;
-                $query ="INSERT INTO `latest_games`(`game_title`, `description`, `image`, `categories`,
-                `Platform`, `release_date`, `Status`) VALUES ('$name','$description','$newPath','$category',
+                $game_image_path = $targetDir.$game_file_name;
+                $scfreenshot_file_path = $targetDir.$scfreenshot_file_name;
+                $query ="INSERT INTO `latest_games`(`game_title`, `description`, `game_images`, `screenshot_image`, 
+                `categories`, `Platform`, `release_date`, `Status`)
+                 VALUES ('$name','$description','$game_image_path','$scfreenshot_file_path','$category',
                 '$platform','$date','$status')";
                   
                     // $query="INSERT INTO latest_games VALUES()";

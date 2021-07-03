@@ -73,11 +73,22 @@
                                 <div class="game-single-img">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <img src="img/images/game_single_img01.jpg" alt="">
+                                        <?php
+                                        $images = $row['screenshot_image'];
+                                        $images = explode(',',$images);
+                                        foreach($images AS $image){
+                                            ?>
+                                        <div class="col-lg-4 col-sm-6">
+                                            <?php echo '<img src="'."lgimage/".$image.'" height=350>'; ?>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <img src="img/images/game_single_img01.jpg" alt="">
+                                        <?php
+                                         
+                                        }
+                                        ?>
                                         </div>
+                                        <!-- <div class="col-sm-6">
+                                            <img src="img/images/game_single_img01.jpg" alt="">
+                                        </div> -->
                                     </div>
                                 </div>
                                 
@@ -99,7 +110,7 @@
                                 <div class="game-single-gallery">
                                     <div class="row">
                                         <?php
-                                        $images = $row['image'];
+                                        $images = $row['game_images'];
                                         $images = explode(',',$images);
                                         foreach($images AS $image){
                                             ?>
