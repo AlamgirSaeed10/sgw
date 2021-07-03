@@ -71,6 +71,10 @@ if($_SESSION['username'])
                                         <div class="col-md-6">
                                            <input type="text" placeholder="Description" name="description" required>
                                        </div>
+                                       <div class="col-md-6">
+                                           <label>Game Images</label>
+                                        <input type="file" name="images[]" multiple accept="image/*">
+                                        </div>
                                         
                                         
                                         <div class="col-md-6">
@@ -90,32 +94,24 @@ if($_SESSION['username'])
                                         </div>
                                        
                                         <div class="col-md-6">
-                                            <input type="file" name="Uploadfile" value="" required>
+                                        <label>Game Screenshots</label>
+                                        <input type="file" name="files[]" multiple accept="image/*">
                                         </div>
-                                        <div class="row">
-                                        <label>Platform</label>
-                                            <div class="col-md-3">
-                                                <label>Desktop</label><input type="radio" name="platform" required>
-                                            </div>&nbsp;&nbsp;&nbsp;
-
-                                            <div class="col-md-3">
-                                                <label>Mobile</label><input type="radio"  name="platform" required>
-                                            </div>
-                                       
-                                            
-                                        </div>
+                                        
                                         <div class="col-md-6">
-                                                <select name="" id="">
-                                                <option value="">1</option>
-                                                <option value="">2</option>
-                                                <option value="">3</option>
+                                        <label>Platform</label>
+                                                <select name="platform" id="">
+                                                <option value="">Desktop</option>
+                                                <option value="">Mobile</option>
                                                 </select>
                                             </div>
                                         <div class="col-md-6">
                                                 <input type="date" placeholder="Date" name="date" required>
                                             </div>
+                                            
                                     </div>  
                                     <input type="submit" name="submit" value="submit"/>
+                                    
                                 </form>
                                   
                             </div>
@@ -128,63 +124,70 @@ if($_SESSION['username'])
 
             <?php
             
-     
+            // if(isset($_POST['view'])){
+            //     $id = $_POST['id'];
+            // $query = "SELECT `image` FROM `latest_games` WHERE id='$id'";
+            // $result = mysqli_query($conn,$query);
+            // $row = mysqli_fetch_assoc($result);
+            // $images = $row['image'];
+            // $images = explode(',',$images);
+            // foreach($images AS $image){
+            //     echo '<img src="'.$image.'" height=100>';
+            // }
+            // }
              if(isset($_POST['submit']))
              {
-
                 
-                $name=$_POST['title'];
-                $description=$_POST['description'];
-                $category=$_POST['game_subcategories'];
-                $platform=$_POST['platform'];
-                $date=$_POST['date'];
-                $date1= date('Y-m-d');
+                 $name=$_POST['title'];
+                 $description=$_POST['description'];
+                 $category=$_POST['game_subcategories'];
+                 $platform=$_POST['platform'];
+                 $date=$_POST['date'];
+                 $date1= date('Y-m-d');
+                 
+                 $targetDir ="lgimage/";
 
-                echo $date1;
-                echo $date;
-               
+                 $game_images=$_FILES['images']["name"];
+                 $game_file_name = implode(',',$game_images);
+                 
+                 $screenshot_image = $_FILES["files"]["name"];
+                 $scfreenshot_file_name = implode(',',$screenshot_image);
                 
-                $filename=$_FILES["Uploadfile"]["name"];
-                $tempname=$_FILES["Uploadfile"]["tmp_name"];
-
-
-                $query="SELECT * FROM latest_games WHERE `game_title` = '$name'";
-                $data= mysqli_query($conn, $query);
-                if (mysqli_num_rows($data) > 0) {
-                    //echo "Error".$name;
-                }else{
-
-
-
-                $folder="lgimage/".$filename;
-                move_uploaded_file($tempname,$folder);
+                foreach ($game_images as $key => $value) {
+                    $targetFilePath = $targetDir.$value;
+                    move_uploaded_file($_FILES["images"]["tmp_name"][$key], $targetFilePath);                                 
+                }
+                foreach ($screenshot_image as $key => $value) {
+                    $targetFilePath = $targetDir.$value;
+                    move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath);                                 
+                    
+                }
                 if($date==$date1 || $date< $date1){
                     $status= "publish";
-                    echo $status.'----'.$date;
-
-                }
-                else{
+                }else{
                     $status="upcoming";
                 }
                 
-                
-                if($name!="" && $category!="" && $filename!="")
-                {
-                   
-                    
+                $game_image_path = $targetDir.$game_file_name;
+                $scfreenshot_file_path = $targetDir.$scfreenshot_file_name;
+                $query ="INSERT INTO `latest_games`(`game_title`, `description`, `game_images`, `screenshot_image`, 
+                `categories`, `Platform`, `release_date`, `Status`)
+                 VALUES ('$name','$description','$game_image_path','$scfreenshot_file_path','$category',
+                '$platform','$date','$status')";
                   
-                    $query="INSERT INTO latest_games VALUES('','$name','$description','$folder','$category','$platform','$date','$status')";
+                    // $query="INSERT INTO latest_games VALUES()";
                     $data= mysqli_query($conn, $query);
                     if($data){
+                        echo "Successful";
                     
-                }
+                // }
 
-                }
+                // }
 
 
-                else{
-                echo " All fields required";
-            }
+            //     else{
+            //     echo " All fields required";
+            // }
         }
 
 
