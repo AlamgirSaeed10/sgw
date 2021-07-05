@@ -7,7 +7,17 @@
     <body>
         <?php include('Linked-packages/preloader.php')?>
         <header>
-        <?php include('Linked-packages/header.php')?>
+        <?php include('Linked-packages/header.php');
+
+        $query = "SELECT `image` FROM `latest_games`";
+        $result = mysqli_query($conn,$query);
+        $row = mysqli_fetch_assoc($result);
+        $images = $row['image'];
+        $images = explode(',',$images);
+        $single_img;
+        foreach($images AS $image){
+           $single_img = $image;
+        ?>
         </header>
 
         <main>
@@ -37,10 +47,6 @@
                 <div class="container">
                     <div class="row">
                         <?php
-                            $query1 = $_GET['search']; 
-                            $query2 = htmlspecialchars($query1); 
-                            $query = addslashes($query2); 
-
                             $sql = "SELECT * FROM `latest_games` order by id asc"; 
                             
                             $raw_results = mysqli_query($conn ,$sql);
@@ -50,7 +56,7 @@
                         <div class="col-lg-4 col-sm-6">
                             <div class="accessories-item text-center mb-80">
                                 <div class="accessories-thumb mb-30">
-                                    <a href="#"><img src="img/product/shop_item08.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo $single_img;?>" alt=""></a>
                                 </div>
                                 <div class="accessories-content">
                                     <h5><a href="#"><?php echo $row['game_title']?></a></h5>
@@ -61,6 +67,7 @@
                         <?php 
                         }
                     }
+                }
                     ?>
                     </div>
                 </div>
