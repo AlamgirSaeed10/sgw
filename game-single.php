@@ -32,7 +32,7 @@
                                 <h2>Upcoming <span>Games</span></h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                         <li class="breadcrumb-item"><a href="#">pages</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">game single</li>
                                     </ol>
