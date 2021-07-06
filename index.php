@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
+        
         <?php include('Linked-packages/headerLinks.php');?>
         <?php include_once('Database/connection.php');?>
     </head>
@@ -108,13 +109,13 @@
 
                                     <div class="latest-games-items mb-30">
                                         <div class="latest-games-thumb">
-                                            <a href="#"><img src="<?php echo $row['image']?>" height='400' width='100' alt=""></a>
+                                            <a href="game-single.php?game_id=<?php echo $row['id']; ?>"><img src="<?php echo $row['game_images']?>" height='400' width='100' alt=""></a>
                                         </div>
                                         <div class="latest-games-content">
                                             <div class="lg-tag">
-                                                <a href="#"><?php echo $row["categories"]?></a>
+                                                <a href="game-single.php?game_id=<?php echo $row['id']; ?>"><?php echo $row["categories"]?></a>
                                             </div>
-                                            <h4><a href="#"><?php echo $row["game_title"] ?></a></h4>
+                                            <h4><a href="game-single.php?game_id=<?php echo $row['id']; ?>"><?php echo $row["game_title"] ?></a></h4>
                                             <p>entry fee : <span>free</span></p>
                                         </div>
                                     </div>
@@ -180,7 +181,7 @@
                 <div class="container-fluid container-full">
                     <div class="row no-gutters new-released-game-active">
                     <?php 
-        $sql = "SELECT * FROM `latest_games`";
+        $sql = "SELECT * FROM `latest_games`WHERE game_status ='publish'";
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) > 0) {
@@ -191,7 +192,7 @@
                         <div class="col-lg-3">
                             <div class="featured-game-item mb-30">
                                 <div class="featured-game-thumb">
-                                    <img src="<?php echo $row['image']?>" height='400' width='100' alt="">
+                                    <img src="<?php echo $row['game_images']?>" height='400' width='100' alt="">
                                 </div>
                                 <div class="featured-game-content">
                                     <h4><a href="#"><?php echo $row["game_title"] ?> </a></h4>
@@ -201,7 +202,7 @@
                                     </div>
                                 </div>
                                 <div class="featured-game-content featured-game-overlay-content">
-                                    <div class="featured-game-icon"><img src="img/icon/featured_game_icon.png" alt=""></div>
+                                    <div class="featured-game-icon"><img src="img/icon/featured_games.png" width="100px" height="80px" alt=""></div>
                                     <h4><a href="#"><?php echo $row["game_title"] ?> </a></h4>
                                     <div class="featured-game-meta">
                                         <i class="fas fa-bell"></i>
@@ -305,10 +306,20 @@
                         }
                     } else {
                         $category  =  $data->channel->category;
-                        for ($i=0; $i <3; $i++) { 
-                        foreach($data->channel->item as $item)
-                        {
+                        $i = 0;
+                        
+                         foreach($data->channel->item as $item){ 
+                            $i++;
+                            if($i>3)
+                            {
+                                break;
+                            }
+                        
+                                
+                            
+                           
                                 # code...
+                                
                             
                             $link =  (string)$item->link;
                             $name = $item->children('media', true)->credit;
@@ -316,7 +327,10 @@
                             $title = (string)$item->title;
                             $pubDate = (string)$item->pubDate;
                             $description = (string)$item->description;
-                            }
+                          
+                              # code...
+                          
+                            
                             ?>
                         <div class="col-lg-4 col-md-6 col-sm-9">
                             <div class="blog-post home-four-blog-post mb-50">
@@ -324,7 +338,7 @@
                                
                                 <div class="blog-post-content">
                                     <div class="blog-meta">
-                                    <h4><a href="#"><?php echo $title;?></a></h4>
+                                    <h4><?php echo $title;?></h4>
                                         <ul>
                                             <li><i class="far fa-user"></i><a href="#"><?php echo $name; ?></a></li>
                                             <li><i class="far fa-calendar-alt"></i><?php echo " ".$pubDate;?></li>
@@ -337,10 +351,13 @@
                             </div>
                         </div>
                         
-                        <?php   
-              }
+                        <?php 
+                        }  
+                        
+              
               }
             }
+        
             ?>
                     </div>
                 </div>

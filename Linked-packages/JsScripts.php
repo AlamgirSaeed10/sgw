@@ -18,3 +18,6 @@
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery.bxslider.min.js" type="text/javascript"></script>
+<script src="js/jquery.fitvids.js" type="text/javascript"></script>

@@ -73,7 +73,7 @@ if($_SESSION['username'])
                                        </div>
                                        <div class="col-md-6">
                                            <label>Game Images</label>
-                                        <input type="file" name="images[]" multiple accept="image/*">
+                                        <input type="file" name="images[]" >
                                         </div>
                                         
                                         
@@ -171,7 +171,7 @@ if($_SESSION['username'])
                 $game_image_path = $targetDir.$game_file_name;
                 $scfreenshot_file_path = $targetDir.$scfreenshot_file_name;
                 $query ="INSERT INTO `latest_games`(`game_title`, `description`, `game_images`, `screenshot_image`, 
-                `categories`, `Platform`, `release_date`, `Status`)
+                `categories`, `Platform`, `release_date`, `game_status`)
                  VALUES ('$name','$description','$game_image_path','$scfreenshot_file_path','$category',
                 '$platform','$date','$status')";
                   

@@ -25,11 +25,11 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="breadcrumb-content text-center">
-                                <h2>Apply for<span>JOB</span></h2>
+                                <h2>Apply for<span> JOB</span></h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">contact</li>
+                                        <li class="breadcrumb-item active" aria-current="page">career</li>
                                     </ol>
                                 </nav>
                             </div>
@@ -89,7 +89,7 @@
                     <div class="row">
                         <div class="col-lg-12 pl-45">
                             <div class="section-title title-style-three mb-20">
-                                <h2>Looking for <span>job</span></h2>
+                                <h2>Looking for<span> job</span></h2>
                             </div>
                             <div class="contact-form">
                                 <form action="career.php" method="post" enctype="multipart/form-data" >

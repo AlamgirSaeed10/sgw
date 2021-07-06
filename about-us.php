@@ -94,15 +94,15 @@
 
                         $start_from=($page-1)*04;
 
-                        $sql="select * from latest_games limit $start_from,$num_per_page";
+                        $sql="select * from latest_games ORDER BY id DESC limit $start_from,$num_per_page" ;
                         $rs_result= mysqli_query($conn, $sql);
-                            while($rows=mysqli_fetch_array($rs_result))
+                            while($rows= mysqli_fetch_array($rs_result))
                             {
                             ?>
                         <div class="col-lg-6">
                             <div class="latest-match-box mb-30" id="load">
                                 <div class="latest-match-thumb">
-                                    <img src="<?php echo $rows['image'];?>" width="200px" height="200px" alt="">
+                                    <img src="<?php echo $rows['game_images'];?>" width="200px" height="270px" alt="">
                                 </div>
                                 <div class="tournament-schedule-content">
                                     <h3><a href="#"><?php echo $rows['game_title'];?></a></h3>

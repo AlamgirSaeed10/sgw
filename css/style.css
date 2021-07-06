@@ -212,6 +212,10 @@ label {
 	border-top: 1px solid #f2f2f2
 }
 /* button style */
+.my-class{
+
+	text-align: center;
+}
 .btn {
 	-moz-user-select: none;
 	border: medium none;
@@ -224,8 +228,9 @@ label {
 	letter-spacing: 0;
 	line-height: 1;
 	margin-bottom: 0;
-	padding: 20px 44px;
-	text-align: center;
+	padding: 15px 40px;
+    margin-left: 10px;
+	text-align: center !important;
 	text-transform: uppercase;
 	touch-action: manipulation;
 	transition: all 0.3s ease 0s;
@@ -519,6 +524,7 @@ ul.minicart .cart-content a:hover,
 	position: relative;
 }
 .navbar-wrap ul li a {
+	margin-left: 7px;
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -859,7 +865,7 @@ ul.minicart .cart-price .new {
 }
 .t-header-top-area .header-top-login ul li a {
     display: block;
-    background: #23262d;
+    background: sd;
     text-transform: uppercase;
     color: #cfcdcd;
     font-weight: 700;
@@ -975,7 +981,7 @@ ul.minicart .cart-price .new {
 }
 .header-style-four .header-top-area {
     /* background-image: url(../img/bg/fourth_header_top_bg.jpg); */
-	background-color: #343d52;
+	background-color: #225675;
     background-position: center;
     background-size: cover;
     padding: 22px 0;
@@ -1032,7 +1038,7 @@ ul.minicart .cart-price .new {
     width: 52px;
     height: 46px;
     line-height: 46px;
-    background: #252634;
+    background: #0e4d92;
     box-shadow: 0px 3px 7px 0px rgb(0 0 0 / 20%), inset 0px 3px 7px 0px rgb(0 0 0 / 40%);
 }
 .header-four-wrap .header-shop-cart ul.minicart {
@@ -1140,8 +1146,8 @@ ul.minicart .cart-price .new {
 /* 4. Breadcrumb */
 .breadcrumb-bg {
 	background-image: url('https://wondery.com/wp-content/uploads/2019/05/WonderyLogoBanner-1920x586.jpg');
-	padding-top: 275px;
-	padding-bottom: 170px;
+	padding-top: 155px;
+	padding-bottom: 100px;
 	background-position: center;
 	background-size: cover;
 }
@@ -1539,7 +1545,7 @@ ul.minicart .cart-price .new {
 	position: relative;
 }
 .home-four-area-bg .bg {
-    background-image: url(../img/bg/home_four_area_bg.png);
+    background-image: url(../img/bg/Game_image.png);
     position: absolute;
     left: 0;
     top: 0;
@@ -1701,13 +1707,13 @@ ul.minicart .cart-price .new {
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	background-image: url(../img/images/title_bar.png);
+	
 	width: 270px;
 	height: 13px;
 	background-repeat: no-repeat;
 }
 .title-style-three::before {
-	background-image: url(../img/images/title_bar02.png);
+	
 }
 .title-style-three h2 {
 	color: #1c1121;
@@ -1955,7 +1961,7 @@ ul.minicart .cart-price .new {
 .home-four-title.text-center h2::after {
     content: "";
     display: block;
-    background-image: url(../img/images/title_bar04.png);
+    /* background-image: url(../img/images/title_bar04.png); */
     width: 126px;
     height: 13px;
     margin: 17px auto 0;
@@ -2333,12 +2339,15 @@ ul.minicart .cart-price .new {
 	width: 100%;
 }
 .featured-game-content {
+	background-color:rgba(233, 163, 1, 0.749);;
 	position: absolute;
-	left: 30px;
-	right: 30px;
+	left: 0px;
+	right: 0px;
+	padding: 10px;
 	bottom: 35px;
 	z-index: 1;
 	transition: .3s linear;
+	margin-bottom: -35px;;
 }
 .featured-game-icon {
 	margin-bottom: 20px;
@@ -2417,8 +2426,8 @@ ul.minicart .cart-price .new {
     padding-right: 60px;
 }
 .new-released-game-area .no-gutters [class*="col-"] {
-	padding-left: 0;
-	padding-right: 0;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 .new-released-game-area {
     background: #f7f7f7;
@@ -2801,7 +2810,7 @@ ul.minicart .cart-price .new {
 	color: #cbcbcb;
 }
 .title-style-three.white-title::before {
-	background-image: url(../img/images/title_bar03.png);
+	
 }
 .just-gamers-list ul li {
 	margin-bottom: 40px;
@@ -3301,6 +3310,7 @@ ul.minicart .cart-price .new {
 .game-single-gallery img {
 	width: 100%;
 	margin-top: 30px;
+	height: 350px;
 }
 .game-single-shape {
 	position: absolute;

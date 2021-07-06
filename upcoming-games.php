@@ -70,7 +70,7 @@
                                     <img src="<?php echo $row['game_images']?>" height='200' width='100' alt="">
                                     <?php
                                     }else{?>
-                                    <img src="https://jpassport.asia/static/image-not-available.png" height='200' width='100' alt="">
+                                    <img src="<?php echo $row['game_images']?>" height='200' width='100' alt="">
                                     <?php
                                     }
                                     ?>
