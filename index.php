@@ -376,5 +376,8 @@
 
 
 		<?php include('Linked-packages/jsScripts.php');?>
+        <script>$('.carousel').carousel({
+  interval: 2000
+})</script>
     </body>
 </html>

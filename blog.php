@@ -69,7 +69,7 @@
                                 $pubDate = (string)$item->pubDate;
                                 $description = (string)$item->description;
                                 ?>  
-                        <div class="col-lg-8">
+                        <div class="col-lg-12">
                             <div class="blog-list-post">
                                 <div class="blog-list-post-thumb">
                                     <!-- <a href="blog-details.html"><img src="img/blog/t_blog_thumb01.jpg" alt=""></a> -->

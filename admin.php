@@ -167,8 +167,10 @@ if($_SESSION['username'])
                 }else{
                     $status="upcoming";
                 }
+
                 
-                $game_image_path = $targetDir.$game_file_name;
+
+                 $game_image_path = $targetDir.$game_file_name;
                 $scfreenshot_file_path = $targetDir.$scfreenshot_file_name;
                 $query ="INSERT INTO `latest_games`(`game_title`, `description`, `game_images`, `screenshot_image`, 
                 `categories`, `Platform`, `release_date`, `game_status`)

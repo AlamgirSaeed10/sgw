@@ -1146,7 +1146,7 @@ ul.minicart .cart-price .new {
 /* 4. Breadcrumb */
 .breadcrumb-bg {
 	background-image: url('https://wondery.com/wp-content/uploads/2019/05/WonderyLogoBanner-1920x586.jpg');
-	padding-top: 155px;
+	padding-top: 255px;
 	padding-bottom: 100px;
 	background-position: center;
 	background-size: cover;
@@ -3484,6 +3484,8 @@ ul.minicart .cart-price .new {
 	margin-bottom: 0;
 }
 .blog-list-post {
+	margin: auto;
+	width: 70%;
 	box-shadow: 0px 2px 12.09px 0.91px rgba(184, 184, 184, 0.15);
 	background: #fff;
 	margin-bottom: 50px;
