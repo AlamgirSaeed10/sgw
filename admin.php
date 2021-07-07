@@ -144,6 +144,11 @@ if($_SESSION['username'])
                  $platform=$_POST['platform'];
                  $date=$_POST['date'];
                  $date1= date('Y-m-d');
+                 $sql = "SELECT * FROM `latest_games` WHERE game_title = '$name'"; 
+                 $results = mysqli_query($conn ,$sql);
+                 if(mysqli_num_rows($results) > 0){ 
+                     echo "<h1>Name Already exists!</h1>";
+                 }else{
                  
                  $targetDir ="lgimage/";
 
@@ -167,33 +172,19 @@ if($_SESSION['username'])
                 }else{
                     $status="upcoming";
                 }
-
-                
-
                  $game_image_path = $targetDir.$game_file_name;
                 $scfreenshot_file_path = $targetDir.$scfreenshot_file_name;
                 $query ="INSERT INTO `latest_games`(`game_title`, `description`, `game_images`, `screenshot_image`, 
                 `categories`, `Platform`, `release_date`, `game_status`)
                  VALUES ('$name','$description','$game_image_path','$scfreenshot_file_path','$category',
                 '$platform','$date','$status')";
-                  
-                    // $query="INSERT INTO latest_games VALUES()";
                     $data= mysqli_query($conn, $query);
                     if($data){
                         echo "Successful";
-                    
-                // }
-
-                // }
-
-
-            //     else{
-            //     echo " All fields required";
-            // }
-        }
-
-
-             }
+                    }
+             } 
+            }
+             
            
             ?>
 
