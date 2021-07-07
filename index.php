@@ -116,7 +116,7 @@
                                                 <a href="game-single.php?game_id=<?php echo $row['id']; ?>"><?php echo $row["categories"]?></a>
                                             </div>
                                             <h4><a href="game-single.php?game_id=<?php echo $row['id']; ?>"><?php echo $row["game_title"] ?></a></h4>
-                                            <p>entry fee : <span>free</span></p>
+                                            <p><?php echo $row['description']; ?></p>
                                         </div>
                                     </div>
                                        <?php

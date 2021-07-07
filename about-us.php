@@ -96,8 +96,14 @@
 
                         $sql="select * from latest_games ORDER BY id DESC limit $start_from,$num_per_page" ;
                         $rs_result= mysqli_query($conn, $sql);
+                        $i =0;
                             while($rows= mysqli_fetch_array($rs_result))
                             {
+                                $i++;
+                                if($i>10){
+                                    break;
+                                }
+                                else{
                             ?>
                         <div class="col-lg-6">
                             <div class="latest-match-box mb-30" id="load">
@@ -115,6 +121,7 @@
                         </div>
                         <?php     
                             }
+                        }
                             ?> 
                        
                     </div>
